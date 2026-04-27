@@ -3,1797 +3,749 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>شراء TikTok Coins في السودان | TwiX STORE</title>
-  <meta name="description" content="شراء وشحن TikTok Coins في السودان بأسعار مميزة من TwiX STORE. شحن سريع، طلب سهل، ودفع عبر بنكك وماي كاشي وبرافو وفودافون كاش." />
-  <meta name="keywords" content="TikTok Coins, شحن تيك توك, شراء TikTok Coins, السودان, TwiX STORE, شحن ألعاب, اشتراكات التطبيقات" />
-  <meta name="author" content="TwiX STORE" />
+  <meta name="description" content="TwiX STORE متجر رقمي لشحن TikTok Coins والألعاب والاشتراكات والعملات الرقمية في السودان." />
+  <meta name="keywords" content="TikTok Coins, شحن تيك توك, السودان, شحن ألعاب, اشتراكات, USDT, TwiX STORE" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://twixstore.org/" />
 
-  <meta property="og:title" content="شراء TikTok Coins في السودان | TwiX STORE" />
-  <meta property="og:description" content="شحن TikTok Coins والألعاب واشتراكات التطبيقات بأسعار مميزة من TwiX STORE." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://twixstore.org/" />
-  <meta property="og:site_name" content="TwiX STORE" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="شراء TikTok Coins في السودان | TwiX STORE" />
-  <meta name="twitter:description" content="شحن TikTok Coins والألعاب واشتراكات التطبيقات بأسعار مميزة من TwiX STORE." />
-
   <style>
     :root{
-      --bg:#060415;
-      --panel:rgba(18,15,44,.96);
-      --line:rgba(255,255,255,.08);
-      --text:#f4f7ff;
-      --muted:#9ba4ca;
-      --cyan:#42d8ff;
-      --blue:#5e86ff;
-      --purple:#8a5cff;
-      --green:#1fd36d;
-      --red:#ff6767;
-      --orange:#ffaf40;
-      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --bg:#07071a; --bg2:#0b0d26; --card:#121436; --card2:#191b46;
+      --line:rgba(255,255,255,.09); --text:#f7f9ff; --muted:#aab2d6;
+      --cyan:#38d5ff; --blue:#586bff; --purple:#8a5cff; --green:#26d07c;
+      --gold:#f5c451; --red:#ff5e78; --shadow:0 18px 45px rgba(0,0,0,.35);
+      --radius:24px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
       font-family:"Segoe UI",Tahoma,Arial,sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#050313 0%,#08061b 55%,#050412 100%);
-      overflow-x:hidden;
       min-height:100vh;
-      padding-bottom:52px;
-    }
-
-    body::before,
-    body::after{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-2;
-    }
-
-    body::before{
       background:
-        radial-gradient(circle at 80% 12%, rgba(108,77,255,.20), transparent 26%),
-        radial-gradient(circle at 20% 72%, rgba(0,183,255,.12), transparent 24%),
-        radial-gradient(circle at 50% 40%, rgba(70,100,255,.08), transparent 35%);
+        radial-gradient(circle at top right,rgba(88,107,255,.24),transparent 30%),
+        radial-gradient(circle at bottom left,rgba(56,213,255,.12),transparent 28%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+      overflow-x:hidden;
+      padding-bottom:58px;
     }
-
-    body::after{
-      background-image:
-        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size:60px 60px;
-      mask-image:linear-gradient(to bottom, rgba(255,255,255,.4), transparent 84%);
-      z-index:-1;
-      opacity:.65;
-    }
-
+    body[dir="ltr"]{font-family:Arial,"Segoe UI",sans-serif}
     button,input,select,textarea{font:inherit}
-    a{text-decoration:none;color:inherit}
-
-    .container{
-      width:min(1220px, calc(100% - 28px));
-      margin:auto;
-    }
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,calc(100% - 28px));margin:auto}
 
     .topbar{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(8,6,24,.78);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.06);
+      position:sticky;top:0;z-index:1000;
+      background:rgba(7,7,26,.82);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
     }
-
-    .topbar-inner{
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-      padding:14px 0;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:900;
-      white-space:nowrap;
-    }
-
-    .brand-mark{
-      width:42px;
-      height:42px;
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      font-size:22px;
-      font-weight:900;
-      color:#fff;
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;min-width:max-content}
+    .logo{
+      width:46px;height:46px;border-radius:16px;display:grid;place-items:center;
       background:linear-gradient(135deg,var(--cyan),var(--purple));
-      box-shadow:0 12px 25px rgba(94,134,255,.35);
+      box-shadow:0 12px 26px rgba(88,107,255,.35);font-weight:950;font-size:22px;
     }
-
-    .brand-text{
-      font-size:18px;
-      letter-spacing:.5px;
+    .brand h1{font-size:19px;line-height:1.1;letter-spacing:.5px}
+    .brand h1 span{color:var(--cyan)}
+    .brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .top-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+    .icon-btn{
+      border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;
+      padding:11px 14px;border-radius:16px;font-weight:800;transition:.2s;
     }
-
-    .brand-text span{color:var(--blue)}
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      flex:1;
-    }
-
-    .nav-link{
-      border:1px solid rgba(255,255,255,.06);
-      background:rgba(255,255,255,.035);
-      color:#dee4ff;
-      padding:12px 18px;
-      border-radius:16px;
-      cursor:pointer;
-      transition:.22s ease;
-    }
-
-    .nav-link:hover{transform:translateY(-2px)}
-    .nav-link.active{
-      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
-      color:#fff;
-    }
-
-    .actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .cart-toggle{
-      position:relative;
-      border:none;
-      background:linear-gradient(135deg,#42d8ff,#7c59ff);
-      color:#fff;
-      padding:12px 18px;
-      border-radius:14px;
-      font-weight:800;
-      cursor:pointer;
-      box-shadow:0 10px 25px rgba(94,134,255,.25);
-    }
-
-    .cart-toggle.bump{
-      animation:cartBump .35s ease;
-    }
-
-    @keyframes cartBump{
-      0%{transform:scale(1)}
-      35%{transform:scale(1.08)}
-      70%{transform:scale(.96)}
-      100%{transform:scale(1)}
-    }
-
+    .icon-btn:hover{transform:translateY(-2px);border-color:rgba(56,213,255,.35)}
+    .cart-open{position:relative;background:linear-gradient(135deg,var(--cyan),var(--purple));border:0}
     .cart-count{
-      position:absolute;
-      top:-8px;
-      left:-8px;
-      min-width:24px;
-      height:24px;
-      padding:0 6px;
-      border-radius:999px;
-      background:#ff4d6d;
-      color:#fff;
-      font-size:12px;
-      font-weight:900;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:2px solid #0d0c2b;
+      position:absolute;top:-8px;left:-8px;min-width:24px;height:24px;border-radius:99px;
+      background:var(--red);border:2px solid var(--bg);display:grid;place-items:center;font-size:12px;padding:0 6px;
     }
 
-    .page{padding:32px 0 50px}
-    .section{display:none}
-    .section.active{display:block}
+    .tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}
+    .tabs::-webkit-scrollbar{display:none}
+    .tab{
+      border:1px solid var(--line);background:rgba(255,255,255,.045);color:#e8ecff;
+      padding:11px 14px;border-radius:18px;white-space:nowrap;font-weight:800;transition:.2s;
+    }
+    .tab.active,.tab:hover{background:linear-gradient(135deg,rgba(56,213,255,.22),rgba(138,92,255,.22));border-color:rgba(56,213,255,.32)}
 
+    .page{padding:24px 0 34px}
     .hero{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-bottom:24px;
+      border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);padding:24px;
+      background:linear-gradient(180deg,rgba(23,26,70,.96),rgba(12,14,42,.96));
+      position:relative;overflow:hidden;margin-bottom:18px;
     }
+    .hero:before{content:"";position:absolute;inset:auto -60px -80px auto;width:250px;height:250px;background:rgba(56,213,255,.12);filter:blur(20px);border-radius:50%}
+    .eyebrow{color:var(--cyan);font-weight:900;letter-spacing:1.5px;font-size:12px;margin-bottom:9px;text-transform:uppercase}
+    .hero h2{font-size:clamp(30px,6vw,54px);line-height:1.15;margin-bottom:12px;max-width:800px}
+    .hero p{color:var(--muted);line-height:1.9;max-width:760px;font-size:15px}
+    .hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .primary,.secondary{border:0;border-radius:18px;padding:14px 18px;color:white;font-weight:900}
+    .primary{background:linear-gradient(135deg,var(--cyan),var(--purple));box-shadow:0 12px 28px rgba(88,107,255,.3)}
+    .secondary{background:rgba(255,255,255,.07);border:1px solid var(--line)}
 
-    .eyebrow{
-      color:var(--cyan);
-      font-weight:800;
-      letter-spacing:2px;
-      font-size:13px;
-      text-transform:uppercase;
-      margin-bottom:8px;
+    .tools{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+    .search{flex:1;min-width:260px;position:relative}
+    .search input{
+      width:100%;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.06);color:white;
+      padding:15px 46px 15px 16px;outline:none;
     }
+    body[dir="ltr"] .search input{padding:15px 16px 15px 46px}
+    .search:before{content:"⌕";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--cyan);font-size:24px}
+    body[dir="ltr"] .search:before{right:auto;left:16px}
+    .notice{min-width:260px;flex:0 1 360px;border:1px solid var(--line);border-radius:20px;background:rgba(38,208,124,.09);padding:13px 15px;color:#dfffea;line-height:1.7;font-size:13px}
 
-    .hero h1{
-      margin:0 0 10px;
-      font-size:clamp(28px,4vw,44px);
-      line-height:1.15;
+    .section{display:none}.section.active{display:block}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin:20px 0 14px;flex-wrap:wrap}
+    .section-head h3{font-size:25px}.section-head p{color:var(--muted);font-size:14px;margin-top:4px}
+    .back-btn{display:none;margin:8px 0 12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:white;border-radius:16px;padding:11px 14px;font-weight:900}
+    .back-btn.show{display:inline-flex}
+
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .cat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{
+      background:linear-gradient(180deg,rgba(25,27,70,.97),rgba(15,17,49,.97));
+      border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 14px 34px rgba(0,0,0,.24);overflow:hidden;transition:.22s;
     }
-
-    .hero p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.9;
-      max-width:780px;
+    .card:hover{transform:translateY(-6px);border-color:rgba(56,213,255,.34);box-shadow:0 20px 44px rgba(0,0,0,.34)}
+    .card-top{padding:18px 18px 0;display:flex;justify-content:center}
+    .icon{
+      width:74px;height:74px;border-radius:24px;display:grid;place-items:center;font-weight:950;font-size:20px;
+      background:linear-gradient(135deg,rgba(56,213,255,.25),rgba(138,92,255,.25));
+      border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 18px rgba(255,255,255,.04),0 12px 24px rgba(0,0,0,.2);
     }
-
-    .section-card{
-      background:linear-gradient(180deg, rgba(19,16,46,.96), rgba(12,10,32,.96));
-      border:1px solid var(--line);
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      padding:22px;
-      margin-bottom:24px;
+    .icon svg{width:38px;height:38px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .icon.gold{background:linear-gradient(135deg,rgba(245,196,81,.28),rgba(138,92,255,.20))}
+    .icon.green{background:linear-gradient(135deg,rgba(38,208,124,.25),rgba(56,213,255,.18))}
+    .icon.red{background:linear-gradient(135deg,rgba(255,94,120,.25),rgba(138,92,255,.18))}
+    .card-body{padding:16px;text-align:center}
+    .card-title{font-size:20px;font-weight:950;margin-bottom:7px}
+    .card-desc{color:var(--muted);font-size:13px;line-height:1.7;min-height:44px;margin-bottom:10px}
+    .price{color:var(--gold);font-weight:950;font-size:18px;margin:8px 0 14px}
+    .card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .card-actions.single{grid-template-columns:1fr}
+    .btn{
+      border:0;border-radius:15px;padding:12px 10px;color:#fff;font-weight:900;font-size:13px;
+      background:linear-gradient(135deg,var(--blue),var(--purple));
     }
-
-    .section-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:18px;
-      flex-wrap:wrap;
+    .btn.add{background:linear-gradient(135deg,var(--cyan),var(--purple))}
+    .btn.buy{background:linear-gradient(135deg,var(--green),#18b86a)}
+    .btn.gray{background:rgba(255,255,255,.08);border:1px solid var(--line)}
+    .custom-box{display:grid;gap:9px;margin-top:5px}
+    .custom-box input,.custom-box select{
+      width:100%;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.06);color:white;padding:12px;outline:none;text-align:center;
     }
+    .custom-total{color:#8ff0bd;font-weight:900;min-height:23px;font-size:13px}
 
-    .section-head h2{
-      margin:0;
-      font-size:24px;
-    }
-
-    .muted{color:var(--muted)}
-    .hidden{display:none !important;}
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:18px;
-    }
-
-    .product-card{
-      background:linear-gradient(180deg, rgba(18,16,44,.96), rgba(13,11,36,.98));
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:26px;
-      overflow:hidden;
-      transition:.25s ease;
-      box-shadow:0 12px 30px rgba(0,0,0,.24);
-    }
-
-    .product-card:hover{
-      transform:translateY(-6px);
-      border-color:rgba(100,135,255,.35);
-      box-shadow:0 18px 40px rgba(0,0,0,.35);
-    }
-
-    .product-card.clean .product-body{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .product-card.clean .options{
-      margin-bottom:0;
-    }
-
-    .product-top{
-      min-height:150px;
-      display:grid;
-      place-items:center;
-      position:relative;
-      font-size:58px;
-      font-weight:900;
-    }
-
-    .bg-blue{background:linear-gradient(135deg,#132c65,#20408f 52%,#0c173f)}
-    .bg-green{background:linear-gradient(135deg,#083f17,#0b6d28 52%,#062f11)}
-    .bg-orange{background:linear-gradient(135deg,#4b1e00,#b45500 52%,#44210c)}
-    .bg-gold{background:linear-gradient(135deg,#544100,#a88700 52%,#493900)}
-    .bg-red{background:linear-gradient(135deg,#4d1404,#ad320d 52%,#531708)}
-    .bg-cyan{background:linear-gradient(135deg,#032f4c,#0462a1 52%,#0b1f3b)}
-    .bg-purple{background:linear-gradient(135deg,#3f1b63,#6a2ddf 52%,#26103f)}
-
-    .tag{
-      position:absolute;
-      top:14px;
-      left:14px;
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:800;
-      color:#fff;
-      background:linear-gradient(135deg,#ff8b46,#ff5f6d);
-    }
-
-    .tag.alt{background:linear-gradient(135deg,#35d5ff,#3de2b7)}
-
-    .product-body{padding:18px}
-    .product-title{
-      margin:0 0 6px;
-      font-size:25px;
-      font-weight:800;
-    }
-
-    .product-subtitle{
-      color:var(--muted);
-      font-size:14px;
-      margin-bottom:14px;
-      line-height:1.7;
-    }
-
-    .price-line{
-      color:#6df4b2;
-      font-weight:900;
-      margin-bottom:14px;
-      font-size:18px;
-    }
-
-    .options{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-bottom:14px;
-    }
-
-    .option-chip{
-      padding:10px 12px;
-      border-radius:12px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.06);
-      color:#dce2ff;
-      font-size:13px;
-      line-height:1.5;
-    }
-
-    .inline-input{
-      width:100%;
-      border:none;
-      border-radius:14px;
-      background:#1c1b44;
-      color:#fff;
-      padding:13px 14px;
-      outline:none;
-      margin-bottom:12px;
-    }
-
-    .inline-price{
-      color:#55e6a5;
-      font-weight:800;
-      margin-bottom:12px;
-      min-height:24px;
-    }
-
-    .btn-row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-
-    .btn-order,
-    .btn-now,
-    .btn-confirm{
-      width:100%;
-      border:0;
-      border-radius:16px;
-      padding:14px 16px;
-      color:#fff;
-      font-weight:900;
-      cursor:pointer;
-    }
-
-    .btn-order{
-      background:linear-gradient(135deg,#42d8ff,#7c59ff);
-      box-shadow:0 12px 25px rgba(94,134,255,.20);
-    }
-
-    .btn-now{
-      background:linear-gradient(135deg,#12b981,#2ce27e);
-    }
-
-    .btn-confirm{
-      background:linear-gradient(135deg,#f59e0b,#ef4444);
-    }
-
-    .dynamic-form{
-      margin-top:24px;
-      display:none;
-    }
-
-    .dynamic-form.show{
-      display:block;
-    }
-
-    .checkout-form{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .field{display:grid;gap:8px}
-    .field.full{grid-column:1/-1}
-
-    .field label{
-      color:#dbe4ff;
-      font-weight:700;
-    }
-
-    .input,
-    .select{
-      width:100%;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.07);
-      background:rgba(255,255,255,.04);
-      color:#fff;
-      padding:15px 16px;
-      outline:none;
-    }
-
-    .input::placeholder{color:#8d96bc}
-    .input:focus,.select:focus{
-      border-color:rgba(66,216,255,.42);
-      box-shadow:0 0 0 4px rgba(66,216,255,.08);
-    }
-
-    .payment-info{
-      display:none;
-      padding:16px;
-      border-radius:16px;
-      background:#15152f;
-      border:1px solid rgba(255,255,255,.08);
-      color:#dce5ff;
-      line-height:2;
-      font-size:14px;
-    }
-
-    .copy-btn{
-      border:none;
-      margin-top:10px;
-      padding:10px 14px;
-      border-radius:12px;
-      background:linear-gradient(135deg,#5e86ff,#8a5cff);
-      color:#fff;
-      font-weight:800;
-      cursor:pointer;
-    }
-
-    .thank-you{
-      display:none;
-      margin-top:16px;
-      padding:18px;
-      border-radius:18px;
-      background:#0f2e1d;
-      border:1px solid #1f8f55;
-      color:#d1fae5;
-      line-height:1.95;
-      font-size:15px;
-    }
-
-    footer{
-      margin-top:34px;
-      padding:28px 0 10px;
-      border-top:1px solid rgba(255,255,255,.06);
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.3fr 1fr 1fr;
-      gap:30px;
-    }
-
-    .footer-title{
-      font-size:36px;
-      font-weight:900;
-      margin-bottom:14px;
-    }
-
-    .footer-title span{color:var(--blue)}
-    .footer-desc{
-      color:var(--muted);
-      line-height:1.9;
-    }
-
-    .footer-col h4{
-      margin:0 0 16px;
-      font-size:24px;
-    }
-
-    .footer-links{
-      display:grid;
-      gap:14px;
-      color:#cfd6f6;
-    }
-
-    .footer-cta{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-
-    .cta-btn{
-      display:block;
-      padding:14px;
-      border-radius:14px;
-      font-weight:800;
-      text-align:center;
-      color:#fff;
-      transition:.25s;
-      box-shadow:0 8px 20px rgba(0,0,0,.3);
-    }
-
-    .cta-btn:hover{
-      transform:translateY(-3px) scale(1.02);
-    }
-
-    .whatsapp{
-      background:linear-gradient(135deg,#25d366,#128c7e);
-    }
-
-    .facebook{
-      background:linear-gradient(135deg,#1877f2,#0d47a1);
-    }
-
-    .tiktok{
-      background:linear-gradient(135deg,#000,#ff0050);
-    }
-
-    .copyright{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.06);
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      color:var(--muted);
-    }
-
-    .cart-modal{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.55);
-      backdrop-filter:blur(8px);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index:999;
-      padding:20px;
-    }
-
+    .cart-modal{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;z-index:2000;padding:12px}
     .cart-modal.show{display:flex}
+    .cart-panel{width:min(780px,100%);max-height:92vh;overflow:auto;background:linear-gradient(180deg,#181b46,#0d0f30);border:1px solid var(--line);border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.5);padding:18px}
+    .cart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px}.cart-head h3{font-size:22px}
+    .close{width:42px;height:42px;border-radius:15px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:white;font-size:24px}
+    .cart-list{display:grid;gap:10px;margin-bottom:14px}
+    .empty{border:1px dashed var(--line);border-radius:18px;padding:22px;text-align:center;color:var(--muted)}
+    .cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.045);padding:12px}
+    .cart-item strong{display:block;margin-bottom:3px}.cart-item small{color:var(--muted);line-height:1.6}.cart-price{color:#8ff0bd;font-weight:900;margin-top:5px;font-size:13px}
+    .qty{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.qty button{width:34px;height:34px;border-radius:11px;border:0;background:#252856;color:white;font-weight:950}.qty .remove{width:auto;padding:0 10px;background:var(--red)}
+    .cart-total{border-top:1px solid var(--line);padding-top:12px;margin-top:10px;color:var(--gold);font-size:18px;font-weight:950}
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{color:#dce4ff;font-weight:850;font-size:13px}
+    .field input,.field select,.field textarea{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.06);color:white;padding:13px;outline:none}.field textarea{min-height:85px;resize:vertical}
+    .payment-info{display:none;border:1px solid rgba(56,213,255,.18);background:rgba(56,213,255,.07);border-radius:18px;padding:13px;line-height:1.8;color:#e9f6ff}
+    .copy{margin-top:8px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#fff;font-weight:900;padding:9px 12px}
+    .confirm{margin-top:12px;width:100%;padding:15px;border-radius:18px;border:0;background:linear-gradient(135deg,var(--green),#11ad62);color:white;font-weight:950;font-size:16px}
+    .thanks{display:none;margin-top:12px;border:1px solid rgba(38,208,124,.35);background:rgba(38,208,124,.11);border-radius:18px;padding:13px;line-height:1.8;color:#dfffea}
 
-    .cart-panel{
-      width:min(760px,100%);
-      max-height:88vh;
-      overflow:auto;
-      background:linear-gradient(180deg, rgba(19,16,46,.98), rgba(12,10,32,.98));
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      box-shadow:0 20px 50px rgba(0,0,0,.45);
-      padding:22px;
+    .reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.review{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:22px;padding:15px}.stars{color:var(--gold);letter-spacing:2px;margin:7px 0}.review p{color:#dce4ff;line-height:1.75;font-size:14px}.review small{color:var(--muted);display:block;margin-top:9px}
+    .review-form{margin-top:15px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:22px;padding:15px}
+
+    .toast-wrap{position:fixed;top:18px;right:18px;z-index:3000;display:grid;gap:8px}.toast{background:linear-gradient(135deg,var(--blue),var(--purple));border:1px solid var(--line);box-shadow:0 15px 35px rgba(0,0,0,.32);border-radius:16px;padding:12px 14px;line-height:1.7;font-weight:850;animation:pop .22s ease}@keyframes pop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+    .floating-wa{position:fixed;bottom:72px;left:16px;z-index:900;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 14px 28px rgba(0,0,0,.32);font-size:25px;color:white}.wa-dot{width:24px;height:24px;border-radius:50%;border:3px solid white;position:relative}.wa-dot:after{content:"";position:absolute;bottom:-7px;right:2px;border-top:8px solid white;border-left:5px solid transparent;transform:rotate(25deg)}
+    .ticker{position:fixed;bottom:0;left:0;width:100%;z-index:850;background:linear-gradient(90deg,#111435,#1b1f55);border-top:1px solid var(--line);overflow:hidden}.ticker-track{white-space:nowrap;display:inline-block;padding:12px 0;color:#fff;font-weight:850;animation:tickerLtr 18s linear infinite}@keyframes tickerLtr{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+    .no-results{display:none;text-align:center;color:var(--muted);padding:20px;border:1px dashed var(--line);border-radius:20px;margin-top:12px}
+
+    @media(max-width:1050px){.grid,.cat-grid{grid-template-columns:repeat(3,1fr)}.reviews{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.grid,.cat-grid{grid-template-columns:repeat(2,1fr)}.form{grid-template-columns:1fr}.topbar-inner{align-items:flex-start}.brand{width:100%;justify-content:space-between}.tabs{padding-bottom:8px}.cart-modal{align-items:flex-end}.cart-panel{border-radius:26px 26px 0 0}.hero{padding:20px}.card-title{font-size:18px}.icon{width:66px;height:66px}.reviews{grid-template-columns:1fr}}
+    @media(max-width:460px){.grid,.cat-grid{grid-template-columns:1fr}.card-actions{grid-template-columns:1fr}.hero-buttons{display:grid}.hero h2{font-size:31px}.top-actions{width:100%;justify-content:space-between}.icon-btn{flex:1}.cart-item{grid-template-columns:1fr}.qty{justify-content:flex-start}.toast-wrap{right:12px;left:12px}.toast{width:100%}}
+  
+    .brand-image{
+      width:74px;height:74px;border-radius:24px;display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(56,213,255,.18),rgba(138,92,255,.18));
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:inset 0 0 18px rgba(255,255,255,.04),0 12px 24px rgba(0,0,0,.2);
+      overflow:hidden;margin:auto;
+    }
+    .brand-image img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.25))}
+    .brand-image.gold{background:linear-gradient(135deg,rgba(245,196,81,.26),rgba(138,92,255,.16))}
+    .brand-image.green{background:linear-gradient(135deg,rgba(38,208,124,.24),rgba(56,213,255,.16))}
+    .brand-image.red{background:linear-gradient(135deg,rgba(255,94,120,.22),rgba(138,92,255,.16))}
+    .return-home{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      margin:0 0 14px;border:1px solid rgba(56,213,255,.28);
+      background:linear-gradient(135deg,rgba(56,213,255,.14),rgba(138,92,255,.16));
+      color:white;border-radius:18px;padding:12px 16px;font-weight:950;
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
+    }
+    .social-footer{
+      margin:28px 0 18px;border:1px solid var(--line);border-radius:26px;
+      background:linear-gradient(180deg,rgba(25,27,70,.78),rgba(15,17,49,.78));
+      padding:18px;box-shadow:0 14px 34px rgba(0,0,0,.18);
+    }
+    .social-footer h3{font-size:22px;margin-bottom:6px}
+    .social-footer p{color:var(--muted);line-height:1.8;margin-bottom:14px}
+    .social-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .social-link{
+      display:flex;align-items:center;justify-content:center;gap:9px;border-radius:18px;
+      padding:14px 12px;color:white;font-weight:950;border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 12px 24px rgba(0,0,0,.18);
+    }
+    .social-link.wa{background:linear-gradient(135deg,#25d366,#128c7e)}
+    .social-link.fb{background:linear-gradient(135deg,#1877f2,#0d47a1)}
+    .social-link.tt{background:linear-gradient(135deg,#111,#ff0050)}
+    .support-float{
+      position:fixed;bottom:140px;left:16px;z-index:920;width:56px;height:56px;border-radius:50%;
+      display:grid;place-items:center;border:0;color:white;background:linear-gradient(135deg,var(--blue),var(--purple));
+      box-shadow:0 14px 28px rgba(0,0,0,.32);font-size:24px;font-weight:950;
+    }
+    .support-modal{
+      position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(8px);
+      display:none;align-items:flex-end;justify-content:center;z-index:2200;padding:12px;
+    }
+    .support-modal.show{display:flex}
+    .support-panel{
+      width:min(520px,100%);max-height:86vh;overflow:auto;background:linear-gradient(180deg,#181b46,#0d0f30);
+      border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.5);
+    }
+    .support-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+    .support-head h3{font-size:21px}
+    .support-messages{display:grid;gap:10px;margin:12px 0;max-height:260px;overflow:auto}
+    .support-bubble{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:16px;padding:10px;line-height:1.7}
+    .support-bubble.reply{background:rgba(38,208,124,.12);border-color:rgba(38,208,124,.25)}
+    .support-note{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:10px}
+    .support-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+    .usdt-choice{display:grid;gap:9px;margin-top:5px}
+    .rate-pill{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.06);color:#8ff0bd;font-weight:950;font-size:13px;
+      margin:4px 0 10px;
+    }
+    @media(max-width:520px){
+      .social-links{grid-template-columns:1fr}
+      .support-actions{grid-template-columns:1fr}
     }
 
-    .cart-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      margin-bottom:18px;
-    }
-
-    .cart-header h2{
-      margin:0;
-      font-size:24px;
-    }
-
-    .cart-close{
-      width:42px;
-      height:42px;
-      border:none;
-      border-radius:12px;
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      font-size:22px;
-      cursor:pointer;
-    }
-
-    .cart-items{
-      display:grid;
-      gap:12px;
-    }
-
-    .cart-empty{
-      text-align:center;
-      color:#9ba4ca;
-      padding:24px;
-      background:rgba(255,255,255,.03);
-      border:1px dashed rgba(255,255,255,.08);
-      border-radius:18px;
-    }
-
-    .cart-item{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:12px;
-      align-items:center;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:18px;
-      padding:14px;
-    }
-
-    .cart-item-title{
-      font-size:17px;
-      font-weight:800;
-      margin-bottom:4px;
-    }
-
-    .cart-item-pack{
-      color:#aab3d6;
-      font-size:13px;
-      line-height:1.7;
-    }
-
-    .cart-item-price{
-      color:#55e6a5;
-      font-size:14px;
-      font-weight:800;
-      margin-top:6px;
-    }
-
-    .cart-controls{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .qty-btn,
-    .remove-btn{
-      border:none;
-      cursor:pointer;
-      font-weight:900;
-      border-radius:10px;
-    }
-
-    .qty-btn{
-      width:34px;
-      height:34px;
-      background:#1d1b43;
-      color:#fff;
-      font-size:18px;
-    }
-
-    .qty-value{
-      min-width:30px;
-      text-align:center;
-      font-weight:900;
-    }
-
-    .remove-btn{
-      padding:9px 12px;
-      background:#ef4444;
-      color:#fff;
-    }
-
-    .cart-footer{
-      margin-top:18px;
-      border-top:1px solid rgba(255,255,255,.07);
-      padding-top:18px;
-    }
-
-    .cart-total{
-      font-size:18px;
-      font-weight:900;
-      margin-bottom:14px;
-    }
-
-    .cart-footer-buttons{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .clear-cart-btn,
-    .send-cart-btn{
-      flex:1;
-      min-width:180px;
-      border:none;
-      border-radius:14px;
-      padding:14px;
-      font-size:15px;
-      font-weight:800;
-      cursor:pointer;
-      color:#fff;
-    }
-
-    .clear-cart-btn{background:linear-gradient(135deg,#475569,#334155)}
-    .send-cart-btn{background:linear-gradient(135deg,#12b981,#2ce27e)}
-
-    .toast-wrap{
-      position:fixed;
-      top:18px;
-      right:18px;
-      z-index:2000;
-      display:grid;
-      gap:10px;
-    }
-
-    .toast{
-      min-width:280px;
-      max-width:360px;
-      padding:14px 16px;
-      border-radius:16px;
-      color:#fff;
-      box-shadow:0 18px 40px rgba(0,0,0,.28);
-      border:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(10px);
-      animation:toastIn .28s ease;
-      line-height:1.8;
-      font-weight:700;
-    }
-
-    .toast.error{
-      background:linear-gradient(135deg, rgba(220,38,38,.95), rgba(127,29,29,.95));
-    }
-
-    .toast.success{
-      background:linear-gradient(135deg, rgba(16,185,129,.95), rgba(5,150,105,.95));
-    }
-
-    .toast.info{
-      background:linear-gradient(135deg, rgba(79,70,229,.95), rgba(59,130,246,.95));
-    }
-
-    @keyframes toastIn{
-      from{opacity:0; transform:translateY(-10px) scale(.96)}
-      to{opacity:1; transform:translateY(0) scale(1)}
-    }
-
-    .fly-item{
-      position:fixed;
-      width:18px;
-      height:18px;
-      border-radius:999px;
-      background:linear-gradient(135deg,#42d8ff,#7c59ff);
-      box-shadow:0 0 18px rgba(66,216,255,.65);
-      z-index:1800;
-      pointer-events:none;
-      transition:transform .8s cubic-bezier(.2,.8,.2,1), opacity .8s ease;
-    }
-
-    .ticker{
-      position:fixed;
-      bottom:0;
-      width:100%;
-      background:linear-gradient(90deg,#0f172a,#1e293b);
-      border-top:1px solid rgba(255,255,255,.08);
-      overflow:hidden;
-      z-index:998;
-    }
-
-    .ticker-track{
-      display:inline-block;
-      white-space:nowrap;
-      padding:12px 0;
-      font-weight:700;
-      color:#fff;
-      animation:scrollTicker 18s linear infinite;
-    }
-
-    @keyframes scrollTicker{
-      0%{transform:translateX(100%)}
-      100%{transform:translateX(-100%)}
-    }
-
-    @media (max-width:1100px){
-      .grid{grid-template-columns:repeat(3,1fr)}
-      .footer-grid{grid-template-columns:1fr 1fr}
-    }
-
-    @media (max-width:850px){
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .checkout-form{grid-template-columns:1fr}
-    }
-
-    @media (max-width:560px){
-      .grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
-      .topbar-inner{justify-content:center}
-      .hero h1{font-size:30px}
-      .btn-row{grid-template-columns:1fr}
-    }
   </style>
 </head>
 <body>
-
-  <div class="topbar">
+  <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <div class="brand-mark">T</div>
-        <div class="brand-text">TWIX <span>STORE</span></div>
+        <div class="logo">T</div>
+        <div>
+          <h1>TWIX <span>STORE</span></h1>
+          <small data-ar="متجر رقمي سريع وآمن" data-en="Fast and secure digital store">متجر رقمي سريع وآمن</small>
+        </div>
       </div>
-
-      <nav class="nav">
-        <button class="nav-link active" data-section="tiktok">TikTok Coins</button>
-        <button class="nav-link" data-section="games">الألعاب</button>
-        <button class="nav-link" data-section="subs">اشتراكات التطبيقات</button>
+      <div class="top-actions">
+        <button class="icon-btn" onclick="toggleLang()">AR / EN</button>
+        <button class="icon-btn cart-open" onclick="toggleCart()"><span data-ar="السلة" data-en="Cart">السلة</span><span id="cartCount" class="cart-count">0</span></button>
+      </div>
+      <nav class="tabs container" style="width:100%">
+        <button class="tab active" data-section="home" data-ar="الرئيسية" data-en="Home">الرئيسية</button>
+        <button class="tab" data-section="tiktok" data-ar="TikTok" data-en="TikTok">TikTok</button>
+        <button class="tab" data-section="games" data-ar="الألعاب" data-en="Games">الألعاب</button>
+        <button class="tab" data-section="subs" data-ar="الاشتراكات" data-en="Subscriptions">الاشتراكات</button>
+        <button class="tab" data-section="crypto" data-ar="العملات الرقمية" data-en="Crypto">العملات الرقمية</button>
+        <button class="tab" data-section="reviews" data-ar="التقييمات" data-en="Reviews">التقييمات</button>
       </nav>
+    </div>
+  </header>
 
-      <div class="actions">
-        <button class="cart-toggle" onclick="toggleCart()">
-          🛒 السلة
-          <span id="cartCount" class="cart-count">0</span>
-        </button>
+  <main class="container page">
+    <section class="hero">
+      <div class="eyebrow">TwiX STORE • Sudan</div>
+      <h2 data-ar="كل خدماتك الرقمية في مكان واحد" data-en="All your digital services in one place">كل خدماتك الرقمية في مكان واحد</h2>
+      <p data-ar="شحن TikTok Coins، الألعاب، الاشتراكات، والعملات الرقمية بطريقة سهلة ومرتبة. اختر الخدمة، أضفها للسلة، أكمل بيانات الطلب، ثم أرسل إثبات الدفع عبر واتساب."
+         data-en="TikTok Coins, games, subscriptions, and crypto services in a simple organized way. Choose a service, add it to cart, fill details, then send payment proof via WhatsApp.">
+        شحن TikTok Coins، الألعاب، الاشتراكات، والعملات الرقمية بطريقة سهلة ومرتبة. اختر الخدمة، أضفها للسلة، أكمل بيانات الطلب، ثم أرسل إثبات الدفع عبر واتساب.
+      </p>
+      <div class="hero-buttons">
+        <button class="primary" onclick="showSection('tiktok')" data-ar="ابدأ الطلب الآن" data-en="Start order now">ابدأ الطلب الآن</button>
+        <button class="secondary" onclick="showSection('reviews')" data-ar="شاهد التقييمات" data-en="View reviews">شاهد التقييمات</button>
+      </div>
+    </section>
+
+    <div class="tools">
+      <div class="search"><input id="searchInput" type="text" placeholder="ابحث عن خدمة أو باقة..." oninput="handleSearch()" /></div>
+      <div class="notice">
+        <b data-ar="تنبيه:" data-en="Note:">تنبيه:</b>
+        <span data-ar="الأسعار قابلة للتعديل لاحقًا، وبعض الخدمات يؤكد سعرها النهائي في واتساب."
+              data-en="Prices can be updated later, and some services are finally confirmed on WhatsApp.">
+          الأسعار قابلة للتعديل لاحقًا، وبعض الخدمات يؤكد سعرها النهائي في واتساب.
+        </span>
       </div>
     </div>
-  </div>
 
-  <div class="page container">
-
-    <section id="tiktokSection" class="section active">
-      <div class="hero">
+    <section id="homeSection" class="section active">
+      <div class="section-head">
         <div>
-          <div class="eyebrow">TwiX STORE • Sudan</div>
-          <h1>شحن TikTok Coins</h1>
-          <p>اشترِ TikTok Coins في السودان بسرعة وسهولة. اختر باقة جاهزة أو أدخل كمية مخصصة، ثم أكمل طلبك عبر واتساب والدفع بالطريقة المناسبة لك.</p>
+          <h3 data-ar="الأقسام الرئيسية" data-en="Main categories">الأقسام الرئيسية</h3>
+          <p data-ar="اختر القسم المطلوب ثم اختر الخدمة والباقات" data-en="Choose a category, then select the service and packages">اختر القسم المطلوب ثم اختر الخدمة والباقات</p>
         </div>
       </div>
-
-      <div class="section-card">
-        <div class="section-head">
-          <h2>الباقات الجاهزة</h2>
-          <div class="muted">اختر الباقة المناسبة وأضفها للسلة</div>
+      <div class="grid cat-grid">
+        <div class="card searchable" data-search="tiktok coins تيك توك عملات" onclick="showSection('tiktok')">
+          <div class="card-top"><div class="brand-image"><img alt="TikTok" src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></div></div>
+          <div class="card-body"><div class="card-title">TikTok Coins</div><div class="card-desc" data-ar="باقات جاهزة وتخصيص كمية" data-en="Ready packages and custom quantity">باقات جاهزة وتخصيص كمية</div><button class="btn add" data-ar="فتح القسم" data-en="Open">فتح القسم</button></div>
         </div>
-
-        <div class="grid">
-          <div class="product-card">
-            <div class="product-top bg-cyan">🪙</div>
-            <div class="product-body">
-              <h3 class="product-title">100 Coins</h3>
-              <div class="product-subtitle">باقة صغيرة</div>
-              <div class="price-line">9,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','100 عملة',9000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(100,9000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-cyan">🪙</div>
-            <div class="product-body">
-              <h3 class="product-title">200 Coins</h3>
-              <div class="product-subtitle">باقة متوسطة</div>
-              <div class="price-line">18,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','200 عملة',18000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(200,18000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-cyan">🪙</div>
-            <div class="product-body">
-              <h3 class="product-title">300 Coins</h3>
-              <div class="product-subtitle">باقة اقتصادية</div>
-              <div class="price-line">22,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','300 عملة',22000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(300,22000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-cyan">🪙</div>
-            <div class="product-body">
-              <h3 class="product-title">400 Coins</h3>
-              <div class="product-subtitle">باقة موفرة</div>
-              <div class="price-line">25,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','400 عملة',25000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(400,25000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-cyan">
-              <span class="tag alt">الأكثر طلبًا</span>🪙
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">500 Coins</h3>
-              <div class="product-subtitle">باقة مميزة</div>
-              <div class="price-line">28,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','500 عملة',28000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(500,28000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-cyan">
-              <span class="tag">أفضل قيمة</span>🪙
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">1000 Coins</h3>
-              <div class="product-subtitle">أفضل سعر مقابل الكمية</div>
-              <div class="price-line">47,000 جنيه سوداني</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('TikTok Coins','1000 عملة',47000,'TikTok Coins', this)">أضف للسلة</button>
-                <button class="btn-now" onclick="quickBuyTikTok(1000,47000, this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-top bg-purple">🪙</div>
-            <div class="product-body">
-              <h3 class="product-title">تخصيص الكمية</h3>
-              <div class="product-subtitle">اكتب عدد العملات وسيتم حساب السعر تلقائيًا</div>
-              <input id="customTikTokCoins" class="inline-input" type="number" placeholder="مثال: 1500" oninput="updateCustomTikTokPrice()">
-              <div id="customTikTokPrice" class="inline-price">السعر: —</div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addCustomTikTokToCart(this)">أضف للسلة</button>
-                <button class="btn-now" onclick="buyCustomTikTokNow(this)">اطلب الآن</button>
-              </div>
-            </div>
-          </div>
+        <div class="card searchable" data-search="games pubg free fire ألعاب" onclick="showSection('games')">
+          <div class="card-top"><div class="brand-image green"><img alt="Games" src="https://cdn-icons-png.flaticon.com/512/686/686589.png"></div></div>
+          <div class="card-body"><div class="card-title" data-ar="الألعاب" data-en="Games">الألعاب</div><div class="card-desc" data-ar="اختر اللعبة ثم باقات الشحن" data-en="Choose a game, then packages">اختر اللعبة ثم باقات الشحن</div><button class="btn add" data-ar="فتح القسم" data-en="Open">فتح القسم</button></div>
         </div>
-
-        <div id="dynamicForm" class="section-card dynamic-form" style="margin-top:24px;margin-bottom:0;">
-          <div class="section-head">
-            <h2>بيانات الطلب</h2>
-            <div class="muted">أكمل البيانات المطلوبة حسب المنتجات داخل السلة</div>
-          </div>
-
-          <div class="checkout-form">
-            <div class="field full hidden" id="tiktokFieldWrap">
-              <label for="tiktokUsername">يوزر تيك توك</label>
-              <input id="tiktokUsername" class="input" type="text" placeholder="@username">
-            </div>
-
-            <div class="field full hidden" id="gameFieldWrap">
-              <label for="playerId">Player ID / UID</label>
-              <input id="playerId" class="input" type="text" placeholder="أدخل ID اللعبة">
-            </div>
-
-            <div class="field full hidden" id="emailFieldWrap">
-              <label for="customerEmail">البريد الإلكتروني</label>
-              <input id="customerEmail" class="input" type="email" placeholder="example@email.com">
-            </div>
-
-            <div class="field full">
-              <label for="paymentMethod">طريقة الدفع</label>
-              <select id="paymentMethod" class="select">
-                <option value="">اختر طريقة الدفع</option>
-                <option value="بنكك">بنكك</option>
-                <option value="ماي كاشي">ماي كاشي</option>
-                <option value="برافو">برافو</option>
-                <option value="فودافون كاش">فودافون كاش</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label>تفاصيل الدفع</label>
-              <div id="paymentInfo" class="payment-info"></div>
-            </div>
-
-            <div class="field full">
-              <button class="btn-confirm" onclick="confirmAndOpenCart()">
-                ✅ تأكيد الطلب ومراجعة السلة
-              </button>
-            </div>
-          </div>
-
-          <div id="thankYouMessage" class="thank-you">
-            نشكر ثقتكم واختياركم <strong>TwiX STORE 💙</strong><br><br>
-            ثقتكم هي أساس رحلتنا، واختياركم لنا ليس مجرد طلب… بل شراكة نعتز بها ونفخر باستمرارها 🤍<br><br>
-            نسعى دائماً لنكون عند حسن ظنكم، ونقدم لكم تجربة تليق بذوقكم وثقتكم الغالية<br><br>
-            نحن هنا من أجلكم في كل وقت، لأي استفسار أو طلب 😄<br><br>
-            الرجاء إرسال اسكرين شوت الدفع في واتساب بعد فتح المحادثة.
-          </div>
+        <div class="card searchable" data-search="subscriptions netflix chatgpt اشتراكات" onclick="showSection('subs')">
+          <div class="card-top"><div class="brand-image gold"><img alt="Subscriptions" src="https://cdn-icons-png.flaticon.com/512/888/888879.png"></div></div>
+          <div class="card-body"><div class="card-title" data-ar="الاشتراكات" data-en="Subscriptions">الاشتراكات</div><div class="card-desc" data-ar="تطبيقات وخطط مختلفة" data-en="Apps and different plans">تطبيقات وخطط مختلفة</div><button class="btn add" data-ar="فتح القسم" data-en="Open">فتح القسم</button></div>
+        </div>
+        <div class="card searchable" data-search="crypto usdt عملات رقمية" onclick="showSection('crypto')">
+          <div class="card-top"><div class="brand-image red"><img alt="USDT" src="https://cryptologos.cc/logos/tether-usdt-logo.png"></div></div>
+          <div class="card-body"><div class="card-title" data-ar="العملات الرقمية" data-en="Crypto">العملات الرقمية</div><div class="card-desc" data-ar="بيع وشراء وخدمات رقمية" data-en="Buy, sell, and digital services">بيع وشراء وخدمات رقمية</div><button class="btn add" data-ar="فتح القسم" data-en="Open">فتح القسم</button></div>
         </div>
       </div>
+    </section>
+
+    <section id="tiktokSection" class="section">
+      <button id="tiktokHomeBack" class="return-home" onclick="showSection('home')">← رجوع للرئيسية</button>
+      <div class="section-head"><div><h3>TikTok Coins</h3><p data-ar="باقات جاهزة أو كمية مخصصة" data-en="Ready packages or custom quantity">باقات جاهزة أو كمية مخصصة</p></div></div>
+      <div id="tiktokGrid" class="grid"></div>
     </section>
 
     <section id="gamesSection" class="section">
-      <div class="hero">
-        <div>
-          <div class="eyebrow">Gaming</div>
-          <h1>شحن الألعاب</h1>
-          <p>اختر الباقة المناسبة، والسعر الحالي سيتم إرساله لك داخل واتساب.</p>
-        </div>
-      </div>
-
-      <div class="section-card">
-        <div class="section-head">
-          <h2>باقات الألعاب</h2>
-          <div class="muted">الأسعار تظهر في واتساب فقط</div>
-        </div>
-
-        <div class="grid">
-          <div class="product-card clean">
-            <div class="product-top bg-blue">🎯</div>
-            <div class="product-body">
-              <h3 class="product-title">PUBG Mobile</h3>
-              <div class="product-subtitle">UC Packages</div>
-              <div class="options">
-                <div class="option-chip">60 UC</div>
-                <div class="option-chip">325 UC</div>
-                <div class="option-chip">660 UC</div>
-                <div class="option-chip">1800 UC</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('PUBG Mobile','60 UC',0,'الألعاب', this)">60 UC</button>
-                <button class="btn-order" onclick="addToCart('PUBG Mobile','325 UC',0,'الألعاب', this)">325 UC</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('PUBG Mobile','660 UC',0,'الألعاب', this)">660 UC</button>
-                <button class="btn-order" onclick="addToCart('PUBG Mobile','1800 UC',0,'الألعاب', this)">1800 UC</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-orange">💎</div>
-            <div class="product-body">
-              <h3 class="product-title">Free Fire</h3>
-              <div class="product-subtitle">Diamond Packages</div>
-              <div class="options">
-                <div class="option-chip">100 Diamonds</div>
-                <div class="option-chip">310 Diamonds</div>
-                <div class="option-chip">520 Diamonds</div>
-                <div class="option-chip">1060 Diamonds</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Free Fire','100 Diamonds',0,'الألعاب', this)">100</button>
-                <button class="btn-order" onclick="addToCart('Free Fire','310 Diamonds',0,'الألعاب', this)">310</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Free Fire','520 Diamonds',0,'الألعاب', this)">520</button>
-                <button class="btn-order" onclick="addToCart('Free Fire','1060 Diamonds',0,'الألعاب', this)">1060</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-gold">🔫</div>
-            <div class="product-body">
-              <h3 class="product-title">Call of Duty</h3>
-              <div class="product-subtitle">CP Packages</div>
-              <div class="options">
-                <div class="option-chip">80 CP</div>
-                <div class="option-chip">400 CP</div>
-                <div class="option-chip">800 CP</div>
-                <div class="option-chip">2400 CP</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Call of Duty','80 CP',0,'الألعاب', this)">80</button>
-                <button class="btn-order" onclick="addToCart('Call of Duty','400 CP',0,'الألعاب', this)">400</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Call of Duty','800 CP',0,'الألعاب', this)">800</button>
-                <button class="btn-order" onclick="addToCart('Call of Duty','2400 CP',0,'الألعاب', this)">2400</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-green">⚽</div>
-            <div class="product-body">
-              <h3 class="product-title">eFootball</h3>
-              <div class="product-subtitle">Coin Packages</div>
-              <div class="options">
-                <div class="option-chip">300 Coins</div>
-                <div class="option-chip">1050 Coins</div>
-                <div class="option-chip">2150 Coins</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('eFootball','300 Coins',0,'الألعاب', this)">300</button>
-                <button class="btn-order" onclick="addToCart('eFootball','1050 Coins',0,'الألعاب', this)">1050</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('eFootball','2150 Coins',0,'الألعاب', this)">2150</button>
-                <button class="btn-order" onclick="addToCart('Mobile Legends','Weekly Pass',0,'الألعاب', this)">ML Pass</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button id="gamesHomeBack" class="return-home" onclick="showSection('home')">← رجوع للرئيسية</button>
+      <button id="gamesBack" class="back-btn" onclick="renderGameServices()" data-ar="رجوع للألعاب" data-en="Back to games">رجوع للألعاب</button>
+      <div class="section-head"><div><h3 data-ar="الألعاب" data-en="Games">الألعاب</h3><p id="gamesSubtitle" data-ar="اختر اللعبة أولًا" data-en="Choose a game first">اختر اللعبة أولًا</p></div></div>
+      <div id="gamesGrid" class="grid"></div>
     </section>
 
     <section id="subsSection" class="section">
-      <div class="hero">
-        <div>
-          <div class="eyebrow">Subscriptions</div>
-          <h1>اشتراكات التطبيقات</h1>
-          <p>اختر الباقة المناسبة، والسعر الحالي سيتم إرساله لك داخل واتساب.</p>
-        </div>
-      </div>
+      <button id="subsHomeBack" class="return-home" onclick="showSection('home')">← رجوع للرئيسية</button>
+      <button id="subsBack" class="back-btn" onclick="renderSubServices()" data-ar="رجوع للتطبيقات" data-en="Back to apps">رجوع للتطبيقات</button>
+      <div class="section-head"><div><h3 data-ar="الاشتراكات" data-en="Subscriptions">الاشتراكات</h3><p id="subsSubtitle" data-ar="اختر التطبيق أولًا" data-en="Choose an app first">اختر التطبيق أولًا</p></div></div>
+      <div id="subsGrid" class="grid"></div>
+    </section>
 
-      <div class="section-card">
-        <div class="section-head">
-          <h2>باقات الاشتراكات</h2>
-          <div class="muted">الأسعار تُرسل في واتساب فقط</div>
-        </div>
+    <section id="cryptoSection" class="section">
+      <button id="cryptoHomeBack" class="return-home" onclick="showSection('home')">← رجوع للرئيسية</button>
+      <button id="cryptoBack" class="back-btn" onclick="renderCryptoServices()" data-ar="رجوع للعملات" data-en="Back to crypto">رجوع للعملات</button>
+      <div class="section-head"><div><h3 data-ar="العملات الرقمية" data-en="Crypto">العملات الرقمية</h3><p id="cryptoSubtitle" data-ar="اختر الخدمة أولًا" data-en="Choose a service first">اختر الخدمة أولًا</p></div></div>
+      <div id="cryptoGrid" class="grid"></div>
+    </section>
 
-        <div class="grid">
-          <div class="product-card clean">
-            <div class="product-top bg-green">🤖</div>
-            <div class="product-body">
-              <h3 class="product-title">ChatGPT Plus</h3>
-              <div class="product-subtitle">خطط الاشتراك</div>
-              <div class="options">
-                <div class="option-chip">شهر</div>
-                <div class="option-chip">3 أشهر</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('ChatGPT Plus','شهر',0,'اشتراكات التطبيقات', this)">شهر</button>
-                <button class="btn-order" onclick="addToCart('ChatGPT Plus','3 أشهر',0,'اشتراكات التطبيقات', this)">3 أشهر</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-orange">🎨</div>
-            <div class="product-body">
-              <h3 class="product-title">Canva Pro</h3>
-              <div class="product-subtitle">خطط الاشتراك</div>
-              <div class="options">
-                <div class="option-chip">شهر</div>
-                <div class="option-chip">3 أشهر</div>
-                <div class="option-chip">سنة</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Canva Pro','شهر',0,'اشتراكات التطبيقات', this)">شهر</button>
-                <button class="btn-order" onclick="addToCart('Canva Pro','3 أشهر',0,'اشتراكات التطبيقات', this)">3 أشهر</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Canva Pro','سنة',0,'اشتراكات التطبيقات', this)">سنة</button>
-                <button class="btn-order" onclick="addToCart('Adobe Creative','تطبيق واحد',0,'اشتراكات التطبيقات', this)">Adobe</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-red">📺</div>
-            <div class="product-body">
-              <h3 class="product-title">Netflix</h3>
-              <div class="product-subtitle">خطط المشاهدة</div>
-              <div class="options">
-                <div class="option-chip">Basic</div>
-                <div class="option-chip">Standard</div>
-                <div class="option-chip">Premium</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Netflix','Basic',0,'اشتراكات التطبيقات', this)">Basic</button>
-                <button class="btn-order" onclick="addToCart('Netflix','Standard',0,'اشتراكات التطبيقات', this)">Standard</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('Netflix','Premium',0,'اشتراكات التطبيقات', this)">Premium</button>
-                <button class="btn-order" onclick="addToCart('Spotify','شهر',0,'اشتراكات التطبيقات', this)">Spotify</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card clean">
-            <div class="product-top bg-blue">▶️</div>
-            <div class="product-body">
-              <h3 class="product-title">YouTube Premium</h3>
-              <div class="product-subtitle">خطط الاشتراك</div>
-              <div class="options">
-                <div class="option-chip">شهر</div>
-                <div class="option-chip">3 أشهر</div>
-                <div class="option-chip">سنة</div>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('YouTube Premium','شهر',0,'اشتراكات التطبيقات', this)">شهر</button>
-                <button class="btn-order" onclick="addToCart('YouTube Premium','3 أشهر',0,'اشتراكات التطبيقات', this)">3 أشهر</button>
-              </div>
-              <div class="btn-row">
-                <button class="btn-order" onclick="addToCart('YouTube Premium','سنة',0,'اشتراكات التطبيقات', this)">سنة</button>
-                <button class="btn-order" onclick="addToCart('Microsoft 365','سنة',0,'اشتراكات التطبيقات', this)">M365</button>
-              </div>
-            </div>
-          </div>
+    <section id="reviewsSection" class="section">
+      <button id="reviewsHomeBack" class="return-home" onclick="showSection('home')">← رجوع للرئيسية</button>
+      <div class="section-head"><div><h3 data-ar="آراء وتقييمات العملاء" data-en="Customer reviews">آراء وتقييمات العملاء</h3><p data-ar="قسم جاهز للربط بقاعدة البيانات لاحقًا" data-en="Ready to connect to database later">قسم جاهز للربط بقاعدة البيانات لاحقًا</p></div></div>
+      <div id="reviewsList" class="reviews"></div>
+      <div class="review-form">
+        <div class="form">
+          <div class="field"><label data-ar="الاسم" data-en="Name">الاسم</label><input id="reviewName" placeholder="اسمك" /></div>
+          <div class="field"><label data-ar="التقييم" data-en="Rating">التقييم</label><select id="reviewRating"><option value="5">5 ⭐</option><option value="4">4 ⭐</option><option value="3">3 ⭐</option><option value="2">2 ⭐</option><option value="1">1 ⭐</option></select></div>
+          <div class="field full"><label data-ar="كلمة شكر أو رأيك" data-en="Your feedback">كلمة شكر أو رأيك</label><textarea id="reviewText" placeholder="اكتب رأيك"></textarea></div>
+          <div class="field full"><button class="confirm" onclick="addReview()" data-ar="إرسال التقييم" data-en="Send review">إرسال التقييم</button></div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">TWIX <span>STORE</span></div>
-          <div class="footer-desc">
-            TWIX STORE منصة رقمية متخصصة في شحن TikTok Coins، الألعاب، واشتراكات التطبيقات، بتجربة سريعة، مرتبة، وموثوقة.
-          </div>
-        </div>
+    <div id="noResults" class="no-results" data-ar="لا توجد نتائج مطابقة للبحث" data-en="No matching results">لا توجد نتائج مطابقة للبحث</div>
+  </main>
 
-        <div class="footer-col">
-          <h4>الخدمات</h4>
-          <div class="footer-links">
-            <div>TikTok Coins</div>
-            <div>شحن الألعاب</div>
-            <div>اشتراكات التطبيقات</div>
-          </div>
-        </div>
 
-        <div class="footer-col">
-          <h4>تواصل معنا</h4>
-          <div class="footer-cta">
-            <a href="https://wa.me/249127104468" target="_blank" class="cta-btn whatsapp">💬 للطلب والتواصل: واتساب</a>
-            <a href="https://www.facebook.com/share/1CvvoJKz2b/" target="_blank" class="cta-btn facebook">🔥 للعروض والمستجدات: فيسبوك</a>
-            <a href="https://www.tiktok.com/@azoozdayer?_r=1&_t=ZS-95jUypjdOpM" target="_blank" class="cta-btn tiktok">🎥 تابعنا في تيك توك</a>
-          </div>
-        </div>
+  <section class="container social-footer">
+    <h3>تواصل معنا</h3>
+    <p>تابع عروض TwiX STORE أو تواصل معنا مباشرة عبر واتساب.</p>
+    <div class="social-links">
+      <a class="social-link wa" href="https://wa.me/249127104468" target="_blank">واتساب</a>
+      <a class="social-link fb" href="https://www.facebook.com/share/1CvvoJKz2b/" target="_blank">فيسبوك</a>
+      <a class="social-link tt" href="https://www.tiktok.com/@azoozdayer?_r=1&_t=ZS-95jUypjdOpM" target="_blank">تيك توك</a>
+    </div>
+  </section>
+
+  <button class="support-float" onclick="toggleSupport()" title="خدمة العملاء">💬</button>
+
+  <div id="supportModal" class="support-modal">
+    <div class="support-panel">
+      <div class="support-head">
+        <h3>خدمة العملاء</h3>
+        <button class="close" onclick="toggleSupport()">×</button>
       </div>
-
-      <div class="copyright">
-        <div>© 2025 TwiX STORE - جميع الحقوق محفوظة</div>
-        <div>صُمم بعناية 💙</div>
+      <p class="support-note">اكتب مشكلتك هنا. الرسالة تتحفظ في قاعدة البيانات لو الصلاحيات مفعلة، ويمكنك المتابعة عبر واتساب.</p>
+      <div id="supportMessages" class="support-messages"></div>
+      <div class="form">
+        <div class="field full"><label>اسمك</label><input id="supportName" placeholder="اسم الزبون"></div>
+        <div class="field full"><label>رسالتك</label><textarea id="supportText" placeholder="اكتب المشكلة أو الاستفسار"></textarea></div>
       </div>
-    </footer>
-  </div>
-
-  <div class="cart-modal" id="cartModal">
-    <div class="cart-panel">
-      <div class="cart-header">
-        <h2>🛒 سلة الطلبات</h2>
-        <button class="cart-close" onclick="toggleCart()">×</button>
-      </div>
-
-      <div id="cartItems" class="cart-items"></div>
-
-      <div class="cart-footer">
-        <div class="cart-total" id="cartTotal">الإجمالي: 0 جنيه</div>
-        <div class="cart-footer-buttons">
-          <button class="clear-cart-btn" onclick="clearCart()">تفريغ السلة</button>
-          <button class="send-cart-btn" onclick="sendCartWhatsApp()">إرسال الطلب</button>
-        </div>
+      <div class="support-actions">
+        <button class="confirm" onclick="sendSupportMessage()">إرسال داخل الموقع</button>
+        <button class="confirm" style="background:linear-gradient(135deg,#25d366,#128c7e)" onclick="openSupportWhatsApp()">واتساب</button>
       </div>
     </div>
   </div>
 
+
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-panel">
+      <div class="cart-head">
+        <h3 data-ar="سلة الطلبات" data-en="Order cart">سلة الطلبات</h3>
+        <button class="close" onclick="toggleCart()">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-list"></div>
+      <div id="cartTotal" class="cart-total">الإجمالي: 0 جنيه</div>
+
+      <div class="form">
+        <div class="field full"><label data-ar="اسم الزبون" data-en="Customer name">اسم الزبون</label><input id="customerName" placeholder="اسمك" /></div>
+        <div id="tiktokField" class="field full" style="display:none"><label>يوزر TikTok</label><input id="tiktokUser" placeholder="@username" /></div>
+        <div id="gameField" class="field full" style="display:none"><label>Player ID / UID</label><input id="playerId" placeholder="ID اللعبة" /></div>
+        <div id="subField" class="field full" style="display:none"><label data-ar="الإيميل / بيانات الاشتراك" data-en="Email / subscription details">الإيميل / بيانات الاشتراك</label><input id="subEmail" placeholder="example@email.com" /></div>
+        <div id="cryptoField" class="field full" style="display:none"><label data-ar="عنوان المحفظة / ملاحظات" data-en="Wallet address / notes">عنوان المحفظة / ملاحظات</label><textarea id="cryptoNote" placeholder="TRC20 / Binance Pay / Notes"></textarea></div>
+        <div id="customerAccountField" class="field full" style="display:none"><label>رقم حساب الزبون لاستلام الجنيه</label><input id="customerAccount" placeholder="مثال: بنكك / ماي كاشي / رقم الحساب"></div>
+        <div class="field full"><label data-ar="طريقة الدفع" data-en="Payment method">طريقة الدفع</label><select id="paymentMethod" onchange="updatePaymentInfo()"><option value="">اختر طريقة الدفع</option><option value="بنكك">بنكك</option><option value="ماي كاشي">ماي كاشي</option><option value="برافو">برافو</option><option value="فودافون كاش">فودافون كاش</option></select></div>
+        <div class="field full"><div id="paymentInfo" class="payment-info"></div></div>
+      </div>
+
+      <button class="confirm" onclick="sendOrder()" data-ar="تأكيد الطلب وإرساله عبر واتساب" data-en="Confirm and send via WhatsApp">تأكيد الطلب وإرساله عبر واتساب</button>
+      <div id="thanksBox" class="thanks">
+        نشكر ثقتكم واختياركم TwiX STORE 💙<br>
+        تم تجهيز طلبك. الرجاء إرسال صورة الدفع داخل واتساب بعد فتح المحادثة.
+      </div>
+    </div>
+  </div>
+
+  <a class="floating-wa" href="https://wa.me/249127104468" target="_blank"><span class="wa-dot"></span></a>
+  <div class="ticker"><div class="ticker-track">⚡ TwiX STORE — شحن سريع — أسعار منافسة — دعم واتساب مباشر — TikTok Coins — Games — Subscriptions — Crypto — </div></div>
   <div id="toastWrap" class="toast-wrap"></div>
 
-  <div class="ticker">
-    <div class="ticker-track">
-      ⚡ مميزاتنا: ✔️ شحن سريع وفوري &nbsp;&nbsp;&nbsp;
-      ✔️ أسعار منافسة &nbsp;&nbsp;&nbsp;
-      ✔️ خدمة موثوقة &nbsp;&nbsp;&nbsp;
-      ✔️ دعم متواصل للزبائن &nbsp;&nbsp;&nbsp;
-      ⚡ مميزاتنا: ✔️ شحن سريع وفوري &nbsp;&nbsp;&nbsp;
-      ✔️ أسعار منافسة &nbsp;&nbsp;&nbsp;
-      ✔️ خدمة موثوقة &nbsp;&nbsp;&nbsp;
-      ✔️ دعم متواصل للزبائن
-    </div>
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
-    const WHATSAPP_NUMBER = "249127104468";
-    let cart = JSON.parse(localStorage.getItem("twix_cart")) || [];
+    const WA_NUMBER = "249127104468";
+    const supabaseUrl = "https://lntftsapfwmjdqdwqnxu.supabase.co";
+    const supabaseKey = "sb_publishable_pObDPTbI50wIUXbqbhpfog_0REqtzvT";
+    const db = window.supabase ? window.supabase.createClient(supabaseUrl, supabaseKey) : null;
+    let lang = localStorage.getItem("twix_lang") || "ar";
+    let cart = JSON.parse(localStorage.getItem("twix_cart") || "[]");
 
-    const navButtons = document.querySelectorAll(".nav-link");
-    const sections = {
-      tiktok: document.getElementById("tiktokSection"),
-      games: document.getElementById("gamesSection"),
-      subs: document.getElementById("subsSection")
+    const prices = {
+      tiktok_100: 9000, tiktok_500: 28000, tiktok_1000: 47000, tiktok_5000: 235000, tiktok_17500: 805000,
+      usdt_buy: 0, usdt_sell: 0
     };
 
-    navButtons.forEach(btn => {
-      btn.addEventListener("click", function() {
-        const sectionName = this.dataset.section;
-        showSection(sectionName);
-      });
-    });
+    const icons = {
+      tiktok:'<svg viewBox="0 0 24 24"><path d="M9 18a4 4 0 1 1 0-8v4a1 1 0 1 0 1 1V3h4a5 5 0 0 0 5 5v4a9 9 0 0 1-5-1.5V15a5 5 0 0 1-5 5z"/></svg>',
+      game:'<svg viewBox="0 0 24 24"><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/><path d="M7 8h10a5 5 0 0 1 4.5 7.2l-.7 1.4a2 2 0 0 1-3.2.5l-1.2-1.1H7.6l-1.2 1.1a2 2 0 0 1-3.2-.5l-.7-1.4A5 5 0 0 1 7 8z"/></svg>',
+      sub:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M8 9h8M8 13h5"/></svg>',
+      crypto:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h6M9 14h6M12 8v8"/></svg>'
+    };
 
-    function showSection(name) {
-      Object.values(sections).forEach(sec => sec.classList.remove("active"));
-      navButtons.forEach(btn => btn.classList.remove("active"));
-      sections[name].classList.add("active");
-      document.querySelector(`.nav-link[data-section="${name}"]`).classList.add("active");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    const tiktokPackages = [
+      {name:"100 Coins", price:prices.tiktok_100}, {name:"500 Coins", price:prices.tiktok_500},
+      {name:"1000 Coins", price:prices.tiktok_1000}, {name:"5000 Coins", price:prices.tiktok_5000},
+      {name:"17500 Coins", price:prices.tiktok_17500}
+    ];
+
+    const games = {
+      "PUBG Mobile":["60 UC","325 UC","660 UC","1800 UC","3850 UC","8100 UC"],
+      "Free Fire":["100 Diamonds","310 Diamonds","520 Diamonds","1060 Diamonds","2180 Diamonds","5600 Diamonds"],
+      "Call of Duty":["80 CP","400 CP","800 CP","2400 CP","5000 CP","10800 CP"],
+      "eFootball":["300 Coins","1050 Coins","2150 Coins","3300 Coins","5800 Coins","12000 Coins"],
+      "Mobile Legends":["Weekly Pass","86 Diamonds","172 Diamonds","257 Diamonds","514 Diamonds","Twilight Pass"],
+      "Roblox":["400 Robux","800 Robux","1700 Robux","4500 Robux","10000 Robux","Premium"]
+    };
+
+    const subs = {
+      "ChatGPT Plus":["1 Month","3 Months"],
+      "Netflix":["Basic","Standard","Premium"],
+      "Canva Pro":["1 Month","3 Months","1 Year"],
+      "YouTube Premium":["1 Month","3 Months","1 Year"],
+      "Spotify Premium":["1 Month","3 Months","1 Year"],
+      "Microsoft 365":["Personal","Family","1 Year"]
+    };
+
+    const crypto = {
+      "USDT":["10 USDT","20 USDT","50 USDT","100 USDT","500 USDT","Custom"],
+      "Binance Pay":["Transfer","Receive","Exchange"],
+      "Perfect Money":["Buy","Sell","Exchange"],
+      "RedotPay":["Top Up","Card Service","Custom"],
+      "Kast":["Top Up","Card Service","Custom"],
+      "Other Crypto":["Buy","Sell","Custom"]
+    };
+
+    function money(v){return v > 0 ? Number(v).toLocaleString()+" جنيه سوداني" : "السعر يؤكد في واتساب"}
+    function toast(msg){const w=document.getElementById("toastWrap");const t=document.createElement("div");t.className="toast";t.textContent=msg;w.appendChild(t);setTimeout(()=>t.remove(),2500)}
+    function setLangText(){document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.body.setAttribute("dir",document.documentElement.dir);document.querySelectorAll("[data-ar][data-en]").forEach(e=>e.textContent=e.getAttribute(lang==="ar"?"data-ar":"data-en"));document.getElementById("searchInput").placeholder=lang==="ar"?"ابحث عن خدمة أو باقة...":"Search service or package...";renderCart();}
+    function toggleLang(){lang=lang==="ar"?"en":"ar";localStorage.setItem("twix_lang",lang);setLangText();}
+    function showSection(name){document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));document.getElementById(name+"Section").classList.add("active");document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.section===name));document.getElementById("searchInput").value="";handleSearch();window.scrollTo({top:0,behavior:"smooth"});}
+    document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>showSection(t.dataset.section));
+
+    function cardHTML(title, desc, iconType, iconClass, action, price, extra=""){
+      return `<div class="card searchable" data-search="${title} ${desc}">
+        <div class="card-top"><div class="icon ${iconClass||""}">${icons[iconType]||"T"}</div></div>
+        <div class="card-body">
+          <div class="card-title">${title}</div>
+          <div class="card-desc">${desc}</div>
+          ${price!==undefined?`<div class="price">${money(price)}</div>`:""}
+          ${extra || `<div class="card-actions single"><button class="btn add" onclick="${action}">اختيار</button></div>`}
+        </div>
+      </div>`;
     }
 
-    function saveCart() {
-      localStorage.setItem("twix_cart", JSON.stringify(cart));
+    function renderTikTok(){
+      const g=document.getElementById("tiktokGrid");
+      g.innerHTML=tiktokPackages.map(p=>cardHTML(p.name,"TikTok Coins","tiktok","",`addItem('TikTok Coins','${p.name}',${p.price},'tiktok')`,p.price,
+        `<div class="card-actions"><button class="btn add" onclick="addItem('TikTok Coins','${p.name}',${p.price},'tiktok')">أضف للسلة</button><button class="btn buy" onclick="addAndOpen('TikTok Coins','${p.name}',${p.price},'tiktok')">اطلب الآن</button></div>`)).join("");
+      g.innerHTML += `<div class="card searchable" data-search="custom tiktok تخصيص تيك توك">
+        <div class="card-top"><div class="icon">${icons.tiktok}</div></div>
+        <div class="card-body">
+          <div class="card-title">تخصيص الكمية</div><div class="card-desc">اكتب الكمية وسيتم حساب السعر تلقائيًا</div>
+          <div class="custom-box"><input id="customTikTok" type="number" placeholder="مثال: 1500" oninput="calcCustomTikTok()"><div id="customTikTokTotal" class="custom-total">السعر: —</div></div>
+          <div class="card-actions"><button class="btn add" onclick="addCustomTikTok()">أضف للسلة</button><button class="btn buy" onclick="addCustomTikTok(true)">اطلب الآن</button></div>
+        </div></div>`;
     }
 
-    function toggleCart() {
-      document.getElementById("cartModal").classList.toggle("show");
-    }
+    function calcTikTok(q){q=Number(q||0); if(q===100)return prices.tiktok_100;if(q===500)return prices.tiktok_500;if(q===1000)return prices.tiktok_1000;if(q===5000)return prices.tiktok_5000;if(q===17500)return prices.tiktok_17500;if(q>=1000&&q<10000)return q*47;if(q>=10000&&q<=20000)return q*46;if(q>20000)return q*45;return 0}
+    function calcCustomTikTok(){let q=document.getElementById("customTikTok").value;let p=calcTikTok(q);document.getElementById("customTikTokTotal").textContent=p?`السعر: ${money(p)}`:"السعر: —"}
+    function addCustomTikTok(open=false){let q=Number(document.getElementById("customTikTok").value);let p=calcTikTok(q);if(!p){toast("اكتب كمية صحيحة");return}addItem("TikTok Coins",q+" Coins",p,"tiktok");if(open)toggleCart();}
 
-    function formatPrice(price) {
-      return Number(price).toLocaleString() + " جنيه";
-    }
+    function renderGameServices(){document.getElementById("gamesBack").classList.remove("show");document.getElementById("gamesSubtitle").textContent="اختر اللعبة أولًا";document.getElementById("gamesGrid").innerHTML=Object.keys(games).map(n=>cardHTML(n,"اضغط لعرض الباقات","game","green",`renderGamePackages('${n}')`)).join("")}
+    function renderGamePackages(name){document.getElementById("gamesBack").classList.add("show");document.getElementById("gamesSubtitle").textContent=name;document.getElementById("gamesGrid").innerHTML=games[name].map(p=>cardHTML(p,name,"game","green","",0,`<div class="card-actions"><button class="btn add" onclick="addItem('${name}','${p}',0,'game')">أضف للسلة</button><button class="btn buy" onclick="addAndOpen('${name}','${p}',0,'game')">اطلب الآن</button></div>`)).join("")}
 
-    function showToast(message, type = "info", duration = 2800){
-      const wrap = document.getElementById("toastWrap");
-      if(!wrap) return;
+    function renderSubServices(){document.getElementById("subsBack").classList.remove("show");document.getElementById("subsSubtitle").textContent="اختر التطبيق أولًا";document.getElementById("subsGrid").innerHTML=Object.keys(subs).map(n=>cardHTML(n,"اضغط لعرض الخطط","sub","gold",`renderSubPackages('${n}')`)).join("")}
+    function renderSubPackages(name){document.getElementById("subsBack").classList.add("show");document.getElementById("subsSubtitle").textContent=name;document.getElementById("subsGrid").innerHTML=subs[name].map(p=>cardHTML(p,name,"sub","gold","",0,`<div class="card-actions"><button class="btn add" onclick="addItem('${name}','${p}',0,'sub')">أضف للسلة</button><button class="btn buy" onclick="addAndOpen('${name}','${p}',0,'sub')">اطلب الآن</button></div>`)).join("")}
 
-      const toast = document.createElement("div");
-      toast.className = `toast ${type}`;
-      toast.textContent = message;
-      wrap.appendChild(toast);
+    function renderCryptoServices(){document.getElementById("cryptoBack").classList.remove("show");document.getElementById("cryptoSubtitle").textContent="اختر الخدمة أولًا";document.getElementById("cryptoGrid").innerHTML=Object.keys(crypto).map(n=>cardHTML(n,"بيع وشراء وخدمات رقمية","crypto","red",`renderCryptoPackages('${n}')`)).join("")}
+    function renderCryptoPackages(name){document.getElementById("cryptoBack").classList.add("show");document.getElementById("cryptoSubtitle").textContent=name;let html=crypto[name].filter(p=>p!=="Custom").map(p=>cardHTML(p,name,"crypto","red","",0,`<div class="card-actions"><button class="btn add" onclick="addItem('${name}','${p}',0,'crypto')">أضف للسلة</button><button class="btn buy" onclick="addAndOpen('${name}','${p}',0,'crypto')">اطلب الآن</button></div>`)).join("");
+      html += `<div class="card searchable" data-search="custom crypto تخصيص ${name}">
+        <div class="card-top"><div class="icon red">${icons.crypto}</div></div>
+        <div class="card-body"><div class="card-title">تخصيص ${name}</div><div class="card-desc">اكتب الكمية المطلوبة وسيتم تأكيد السعر في واتساب</div>
+        <div class="custom-box"><input id="customCryptoAmount" type="number" placeholder="مثال: 75"><select id="customCryptoType"><option>Buy</option><option>Sell</option></select></div>
+        <div class="card-actions"><button class="btn add" onclick="addCustomCrypto('${name}')">أضف للسلة</button><button class="btn buy" onclick="addCustomCrypto('${name}',true)">اطلب الآن</button></div></div></div>`;
+      document.getElementById("cryptoGrid").innerHTML=html}
+    function addCustomCrypto(name,open=false){let a=document.getElementById("customCryptoAmount").value;let t=document.getElementById("customCryptoType").value;if(!a){toast("اكتب الكمية");return}addItem(name,`${t} ${a}`,0,"crypto");if(open)toggleCart();}
 
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.transform = "translateY(-8px) scale(.96)";
-        setTimeout(() => toast.remove(), 220);
-      }, duration);
-    }
+    function addItem(name,pack,price,type){cart.push({name,pack,price,type,qty:1});saveCart();renderCart();toast("تمت الإضافة للسلة")}
+    function addAndOpen(name,pack,price,type){addItem(name,pack,price,type);toggleCart()}
+    function saveCart(){localStorage.setItem("twix_cart",JSON.stringify(cart))}
+    function toggleCart(){document.getElementById("cartModal").classList.toggle("show");renderCart()}
+    function inc(i){cart[i].qty++;saveCart();renderCart()}
+    function dec(i){cart[i].qty--;if(cart[i].qty<=0)cart.splice(i,1);saveCart();renderCart()}
+    function rem(i){cart.splice(i,1);saveCart();renderCart()}
+    function total(){return cart.reduce((s,i)=>s+(i.price*i.qty),0)}
+    function hasType(t){return cart.some(i=>i.type===t)}
+    function renderCart(){let box=document.getElementById("cartItems");let count=cart.reduce((s,i)=>s+i.qty,0);document.getElementById("cartCount").textContent=count;if(!cart.length){box.innerHTML='<div class="empty">السلة فارغة</div>';document.getElementById("cartTotal").textContent="الإجمالي: 0 جنيه"}else{box.innerHTML=cart.map((i,idx)=>`<div class="cart-item"><div><strong>${i.name}</strong><small>${i.pack}</small><div class="cart-price">${i.price?money(i.price*i.qty):"السعر يؤكد في واتساب"}</div></div><div class="qty"><button onclick="inc(${idx})">+</button><b>${i.qty}</b><button onclick="dec(${idx})">-</button><button class="remove" onclick="rem(${idx})">حذف</button></div></div>`).join("");document.getElementById("cartTotal").textContent="الإجمالي: "+money(total())}document.getElementById("tiktokField").style.display=hasType("tiktok")?"grid":"none";document.getElementById("gameField").style.display=hasType("game")?"grid":"none";document.getElementById("subField").style.display=hasType("sub")?"grid":"none";document.getElementById("cryptoField").style.display=hasType("crypto")?"grid":"none";}
+    function updatePaymentInfo(){let m=document.getElementById("paymentMethod").value;let info=document.getElementById("paymentInfo");let data={ "بنكك":["3697220","عبدالعزيز داير خضر"],"ماي كاشي":["401401477","عبدالعزيز داير خضر"],"برافو":["71149462","عبدالعزيز داير خضر"],"فودافون كاش":["01036372342","علي"]};if(!m){info.style.display="none";return}info.style.display="block";info.innerHTML=`رقم الدفع: <b>${data[m][0]}</b><br>الاسم: <b>${data[m][1]}</b><br>التعليق: مقابل شحن من متجر TwiX<br><button class="copy" onclick="copyText('${data[m][0]}')">نسخ الرقم</button>`}
+    function copyText(t){navigator.clipboard.writeText(t);toast("تم النسخ")}
+    function sendOrder(){if(!cart.length){toast("السلة فارغة");return}let pay=document.getElementById("paymentMethod").value;if(!pay){toast("اختر طريقة الدفع");return}if(hasType("tiktok")&&!document.getElementById("tiktokUser").value.trim()){toast("أدخل يوزر تيك توك");return}if(hasType("game")&&!document.getElementById("playerId").value.trim()){toast("أدخل Player ID");return}if(hasType("sub")&&!document.getElementById("subEmail").value.trim()){toast("أدخل بيانات الاشتراك");return}if(hasType("crypto")&&!document.getElementById("cryptoNote").value.trim()){toast("أدخل بيانات العملات الرقمية");return}
+      let msg="طلب جديد من TwiX STORE\n\n";let name=document.getElementById("customerName").value.trim();if(name)msg+="الاسم: "+name+"\n";if(hasType("tiktok"))msg+="يوزر تيك توك: "+document.getElementById("tiktokUser").value+"\n";if(hasType("game"))msg+="Player ID: "+document.getElementById("playerId").value+"\n";if(hasType("sub"))msg+="بيانات الاشتراك: "+document.getElementById("subEmail").value+"\n";if(hasType("crypto"))msg+="بيانات العملات الرقمية: "+document.getElementById("cryptoNote").value+"\n";msg+="طريقة الدفع: "+pay+"\n\nتفاصيل الطلب:\n";cart.forEach((i,n)=>msg+=`${n+1}- ${i.name} | ${i.pack} | الكمية: ${i.qty} | السعر: ${i.price?money(i.price*i.qty):"يؤكد في واتساب"}\n`);msg+="\nالإجمالي: "+money(total())+"\n\nالرجاء إرسال صورة الدفع هنا.";document.getElementById("thanksBox").style.display="block";window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg));cart=[];saveCart();renderCart();}
+    function handleSearch(){let q=document.getElementById("searchInput").value.toLowerCase().trim();let active=document.querySelector(".section.active");let cards=active.querySelectorAll(".searchable");let visible=0;cards.forEach(c=>{let ok=!q||c.dataset.search.toLowerCase().includes(q)||c.textContent.toLowerCase().includes(q);c.style.display=ok?"":"none";if(ok)visible++});document.getElementById("noResults").style.display=(cards.length&&visible===0)?"block":"none";}
+    function renderReviews(){let reviews=JSON.parse(localStorage.getItem("twix_reviews")||"[]");if(!reviews.length)reviews=[{n:"أحمد",r:5,t:"خدمة سريعة ومرتبة جدًا."},{n:"سارة",r:5,t:"التعامل محترم والطلب وصل بسرعة."},{n:"محمد",r:4,t:"موقع واضح وسهل."}];document.getElementById("reviewsList").innerHTML=reviews.map(x=>`<div class="review"><b>${x.n}</b><div class="stars">${"★".repeat(x.r)}${"☆".repeat(5-x.r)}</div><p>${x.t}</p><small>TwiX STORE</small></div>`).join("")}
+    function addReview(){let n=document.getElementById("reviewName").value||"عميل";let r=Number(document.getElementById("reviewRating").value);let t=document.getElementById("reviewText").value;if(!t){toast("اكتب التقييم");return}let reviews=JSON.parse(localStorage.getItem("twix_reviews")||"[]");reviews.unshift({n,r,t});localStorage.setItem("twix_reviews",JSON.stringify(reviews));document.getElementById("reviewText").value="";renderReviews();toast("تم إرسال التقييم")}
+    
+    // ===== Safe add-ons: images/support/USDT payment rules =====
+    const twixOriginalRenderCart = renderCart;
+    renderCart = function(){
+      twixOriginalRenderCart();
+      const hasCustomerBuysUSDT = cart.some(i => i.type === "crypto_customer_buys");
+      const hasStoreBuysUSDT = cart.some(i => i.type === "crypto_store_buys");
+      const accountField = document.getElementById("customerAccountField");
+      const cryptoField = document.getElementById("cryptoField");
+      if(accountField) accountField.style.display = hasStoreBuysUSDT ? "grid" : "none";
+      if(cryptoField && (hasCustomerBuysUSDT || hasStoreBuysUSDT)) cryptoField.style.display = "grid";
+      filterPaymentForUSDT();
+    };
 
-    function animateToCart(buttonElement){
-      const cartBtn = document.querySelector(".cart-toggle");
-      if(!buttonElement || !cartBtn) return;
-
-      const start = buttonElement.getBoundingClientRect();
-      const end = cartBtn.getBoundingClientRect();
-
-      const fly = document.createElement("div");
-      fly.className = "fly-item";
-      fly.style.left = (start.left + start.width / 2 - 9) + "px";
-      fly.style.top = (start.top + start.height / 2 - 9) + "px";
-      document.body.appendChild(fly);
-
-      requestAnimationFrame(() => {
-        const dx = (end.left + end.width / 2) - (start.left + start.width / 2);
-        const dy = (end.top + end.height / 2) - (start.top + start.height / 2);
-        fly.style.transform = `translate(${dx}px, ${dy}px) scale(.4)`;
-        fly.style.opacity = "0.25";
-      });
-
-      setTimeout(() => {
-        fly.remove();
-        cartBtn.classList.add("bump");
-        setTimeout(() => cartBtn.classList.remove("bump"), 350);
-      }, 820);
-    }
-
-    function calculateTikTokPrice(coins) {
-      let price = 0;
-      if (coins === 100) price = 9000;
-      else if (coins === 200) price = 18000;
-      else if (coins === 300) price = 22000;
-      else if (coins === 400) price = 25000;
-      else if (coins === 500) price = 28000;
-      else if (coins >= 1000 && coins < 10000) price = coins * 47;
-      else if (coins >= 10000 && coins <= 20000) price = coins * 46;
-      else if (coins > 20000) price = coins * 45;
-      return price;
-    }
-
-    function updateCustomTikTokPrice() {
-      const coins = Number(document.getElementById("customTikTokCoins").value);
-      const price = calculateTikTokPrice(coins);
-      document.getElementById("customTikTokPrice").textContent =
-        coins > 0 && price > 0
-          ? "السعر: " + price.toLocaleString() + " جنيه سوداني"
-          : "السعر: —";
-    }
-
-    function updateDynamicFields() {
-      const form = document.getElementById("dynamicForm");
-      const hasTikTok = cart.some(item => item.section === "TikTok Coins");
-      const hasGames = cart.some(item => item.section === "الألعاب");
-      const hasSubs = cart.some(item => item.section === "اشتراكات التطبيقات");
-
-      document.getElementById("tiktokFieldWrap").classList.toggle("hidden", !hasTikTok);
-      document.getElementById("gameFieldWrap").classList.toggle("hidden", !hasGames);
-      document.getElementById("emailFieldWrap").classList.toggle("hidden", !hasSubs);
-
-      if (cart.length > 0) {
-        form.classList.add("show");
-      } else {
-        form.classList.remove("show");
+    function filterPaymentForUSDT(){
+      const select = document.getElementById("paymentMethod");
+      if(!select) return;
+      const hasCustomerBuysUSDT = cart.some(i => i.type === "crypto_customer_buys");
+      const hasStoreBuysUSDT = cart.some(i => i.type === "crypto_store_buys");
+      Array.from(select.options).forEach(opt => opt.hidden = false);
+      if(hasCustomerBuysUSDT && !hasStoreBuysUSDT){
+        Array.from(select.options).forEach(opt => {
+          if(opt.value && opt.value !== "بنكك") opt.hidden = true;
+        });
+        if(select.value && select.value !== "بنكك") select.value = "";
       }
     }
 
-    function scrollToDynamicForm() {
-      const form = document.getElementById("dynamicForm");
-      if (form && cart.length > 0) {
-        form.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+    function usdtRate(kind){
+      if(kind === "customer_buys") return 4200;
+      if(kind === "store_buys") return 4150;
+      return 0;
     }
 
-    function addToCart(name, pack, price = 0, section = "", btn = null) {
-      const existing = cart.find(item =>
-        item.name === name &&
-        item.pack === pack &&
-        item.section === section &&
-        item.price === price
-      );
-
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({ name, pack, price, qty: 1, section });
-      }
-
-      saveCart();
-      renderCart();
-      updateDynamicFields();
-
-      if(btn) animateToCart(btn);
-      showToast("تمت إضافة العنصر إلى السلة", "success", 1800);
-      scrollToDynamicForm();
-    }
-
-    function addCustomTikTokToCart(btn = null) {
-      const coins = Number(document.getElementById("customTikTokCoins").value);
-      const price = calculateTikTokPrice(coins);
-
-      if (!coins || price <= 0) {
-        showToast("اكتب كمية صحيحة حسب نظام التسعير", "error");
+    const twixOriginalRenderCryptoPackages = renderCryptoPackages;
+    renderCryptoPackages = function(name){
+      if(name !== "USDT"){
+        twixOriginalRenderCryptoPackages(name);
         return;
       }
 
-      addToCart("TikTok Coins", coins + " عملة", price, "TikTok Coins", btn);
-      document.getElementById("customTikTokCoins").value = "";
-      document.getElementById("customTikTokPrice").textContent = "السعر: —";
-    }
+      document.getElementById("cryptoBack").classList.add("show");
+      document.getElementById("cryptoSubtitle").textContent = "USDT";
+      const customerRate = usdtRate("customer_buys");
+      const storeRate = usdtRate("store_buys");
 
-    function quickBuyTikTok(coins, price, btn = null) {
-      addToCart("TikTok Coins", coins + " عملة", price, "TikTok Coins", btn);
-      showToast("أكمل البيانات المطلوبة أسفل المنتجات", "info");
-    }
-
-    function buyCustomTikTokNow(btn = null) {
-      const coins = Number(document.getElementById("customTikTokCoins").value);
-      const price = calculateTikTokPrice(coins);
-
-      if (!coins || price <= 0) {
-        showToast("اكتب كمية صحيحة حسب نظام التسعير", "error");
-        return;
-      }
-
-      addToCart("TikTok Coins", coins + " عملة", price, "TikTok Coins", btn);
-      document.getElementById("customTikTokCoins").value = "";
-      document.getElementById("customTikTokPrice").textContent = "السعر: —";
-      showToast("أكمل البيانات المطلوبة أسفل المنتجات", "info");
-    }
-
-    function increase(index) {
-      cart[index].qty += 1;
-      saveCart();
-      renderCart();
-      updateDynamicFields();
-    }
-
-    function decrease(index) {
-      cart[index].qty -= 1;
-      if (cart[index].qty <= 0) cart.splice(index, 1);
-      saveCart();
-      renderCart();
-      updateDynamicFields();
-    }
-
-    function removeItem(index) {
-      cart.splice(index, 1);
-      saveCart();
-      renderCart();
-      updateDynamicFields();
-      showToast("تم حذف العنصر من السلة", "info");
-    }
-
-    function clearCart() {
-      cart = [];
-      saveCart();
-      renderCart();
-      updateDynamicFields();
-      showToast("تم تفريغ السلة", "info");
-    }
-
-    function renderCart() {
-      const cartItems = document.getElementById("cartItems");
-      const cartTotal = document.getElementById("cartTotal");
-      const cartCount = document.getElementById("cartCount");
-
-      if (!cartItems || !cartTotal || !cartCount) return;
-
-      let total = 0;
-      let totalQty = 0;
-
-      if (cart.length === 0) {
-        cartItems.innerHTML = `<div class="cart-empty">السلة فارغة حالياً</div>`;
-        cartTotal.textContent = "الإجمالي: 0 جنيه";
-        cartCount.textContent = "0";
-        return;
-      }
-
-      cartItems.innerHTML = "";
-
-      cart.forEach((item, index) => {
-        const itemTotal = item.price * item.qty;
-        total += itemTotal;
-        totalQty += item.qty;
-
-        cartItems.innerHTML += `
-          <div class="cart-item">
-            <div>
-              <div class="cart-item-title">${item.name}</div>
-              <div class="cart-item-pack">${item.pack}</div>
-              ${item.price > 0
-                ? `<div class="cart-item-price">${formatPrice(item.price)} × ${item.qty} = ${formatPrice(itemTotal)}</div>`
-                : `<div class="cart-item-price">السعر يُرسل في واتساب</div>`
-              }
+      document.getElementById("cryptoGrid").innerHTML = `
+        <div class="card searchable" data-search="usdt buy customer شراء دولار">
+          <div class="card-top"><div class="brand-image red"><img alt="USDT" src="https://cryptologos.cc/logos/tether-usdt-logo.png"></div></div>
+          <div class="card-body">
+            <div class="card-title">شراء USDT من المتجر</div>
+            <div class="card-desc">الزبون عايز دولار/USDT ويدفع بالجنيه السوداني</div>
+            <div class="rate-pill">1 USDT = ${customerRate.toLocaleString()} جنيه</div>
+            <div class="custom-box">
+              <input id="usdtCustomerAmount" type="number" placeholder="مثال: 100" oninput="calcUsdtCustomerBuys()">
+              <div id="usdtCustomerTotal" class="custom-total">الإجمالي: —</div>
             </div>
-
-            <div class="cart-controls">
-              <button class="qty-btn" onclick="increase(${index})">+</button>
-              <div class="qty-value">${item.qty}</div>
-              <button class="qty-btn" onclick="decrease(${index})">-</button>
-              <button class="remove-btn" onclick="removeItem(${index})">حذف</button>
+            <div class="card-actions">
+              <button class="btn add" onclick="addUsdtCustomerBuys(false)">أضف للسلة</button>
+              <button class="btn buy" onclick="addUsdtCustomerBuys(true)">اطلب الآن</button>
             </div>
           </div>
-        `;
-      });
+        </div>
 
-      cartTotal.textContent = "الإجمالي: " + formatPrice(total);
-      cartCount.textContent = totalQty;
+        <div class="card searchable" data-search="usdt sell customer بيع دولار">
+          <div class="card-top"><div class="brand-image red"><img alt="USDT" src="https://cryptologos.cc/logos/tether-usdt-logo.png"></div></div>
+          <div class="card-body">
+            <div class="card-title">بيع USDT للمتجر</div>
+            <div class="card-desc">الزبون عندو دولار/USDT وإنت تشتري منو</div>
+            <div class="rate-pill">1 USDT = ${storeRate.toLocaleString()} جنيه</div>
+            <div class="custom-box">
+              <input id="usdtStoreAmount" type="number" placeholder="مثال: 100" oninput="calcUsdtStoreBuys()">
+              <div id="usdtStoreTotal" class="custom-total">الإجمالي: —</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn add" onclick="addUsdtStoreBuys(false)">أضف للسلة</button>
+              <button class="btn buy" onclick="addUsdtStoreBuys(true)">اطلب الآن</button>
+            </div>
+          </div>
+        </div>
+      `;
+    };
+
+    function calcUsdtCustomerBuys(){
+      const amount = Number(document.getElementById("usdtCustomerAmount").value || 0);
+      const totalBox = document.getElementById("usdtCustomerTotal");
+      totalBox.textContent = amount ? "الإجمالي: " + money(amount * usdtRate("customer_buys")) : "الإجمالي: —";
     }
 
-    function updatePaymentInfo() {
-      const method = document.getElementById("paymentMethod").value;
-      const box = document.getElementById("paymentInfo");
-
-      if (!method) {
-        box.style.display = "none";
-        box.innerHTML = "";
-        return;
-      }
-
-      if (method === "بنكك") {
-        box.innerHTML = `
-          <strong>🚀 لإكمال طلبك من TwiX STORE:</strong><br>
-          💳 قم بالإيداع لرقم حساب بنكك:<br>
-          <strong>3697220</strong><br>
-          باسم: عبدالعزيز داير خضر<br>
-          <button class="copy-btn" onclick="copyPaymentNumber('3697220')">نسخ الرقم</button><br><br>
-          📌 تذكير مهم:<br>
-          * رقم العملية يجب أن يكون ظاهر<br>
-          * التعليق: مقابل شحن من متجر TwiX<br>
-          * لا يقبل إشعار بدون تعليق ⭕️
-        `;
-      } else if (method === "ماي كاشي") {
-        box.innerHTML = `
-          <strong>🚀 لإكمال طلبك من TwiX STORE:</strong><br>
-          💳 قم بالإيداع لرقم حساب ماي كاشي:<br>
-          <strong>401401477</strong><br>
-          باسم: عبدالعزيز داير خضر<br>
-          <button class="copy-btn" onclick="copyPaymentNumber('401401477')">نسخ الرقم</button><br><br>
-          📌 تذكير مهم:<br>
-          * رقم العملية يجب أن يكون ظاهر<br>
-          * التعليق: مقابل شحن من متجر TwiX<br>
-          * لا يقبل إشعار بدون تعليق ⭕️
-        `;
-      } else if (method === "برافو") {
-        box.innerHTML = `
-          <strong>🚀 لإكمال طلبك من TwiX STORE:</strong><br>
-          💳 قم بالإيداع لرقم حساب برافو:<br>
-          <strong>71149462</strong><br>
-          باسم: عبدالعزيز داير خضر<br>
-          <button class="copy-btn" onclick="copyPaymentNumber('71149462')">نسخ الرقم</button><br><br>
-          📌 تذكير مهم:<br>
-          * رقم العملية يجب أن يكون ظاهر<br>
-          * التعليق: مقابل شحن من متجر TwiX<br>
-          * لا يقبل إشعار بدون تعليق ⭕️
-        `;
-      } else if (method === "فودافون كاش") {
-        box.innerHTML = `
-          <strong>🚀 لإكمال طلبك من TwiX STORE:</strong><br>
-          💳 قم بالإيداع لرقم محفظة فودافون كاش:<br>
-          <strong>01036372342</strong><br>
-          باسم: علي<br>
-          <button class="copy-btn" onclick="copyPaymentNumber('01036372342')">نسخ الرقم</button><br><br>
-          📌 تذكير مهم:<br>
-          * رقم العملية يجب أن يكون ظاهر<br>
-          * التعليق: مقابل شحن من متجر TwiX<br>
-          * لا يقبل إشعار بدون تعليق ⭕️
-        `;
-      }
-
-      box.style.display = "block";
+    function calcUsdtStoreBuys(){
+      const amount = Number(document.getElementById("usdtStoreAmount").value || 0);
+      const totalBox = document.getElementById("usdtStoreTotal");
+      totalBox.textContent = amount ? "الإجمالي: " + money(amount * usdtRate("store_buys")) : "الإجمالي: —";
     }
 
-    function copyPaymentNumber(number) {
-      navigator.clipboard.writeText(number).then(() => {
-        showToast("تم نسخ رقم الدفع: " + number, "success");
-      }).catch(() => {
-        showToast("تعذر نسخ الرقم", "error");
-      });
+    function addUsdtCustomerBuys(open=false){
+      const amount = Number(document.getElementById("usdtCustomerAmount").value || 0);
+      if(!amount){toast("اكتب كمية USDT");return}
+      const price = amount * usdtRate("customer_buys");
+      addItem("USDT", `الزبون يشتري ${amount} USDT بسعر ${usdtRate("customer_buys")}`, price, "crypto_customer_buys");
+      if(open) toggleCart();
     }
 
-    function confirmAndOpenCart() {
-      if (cart.length === 0) {
-        showToast("السلة فارغة، أضف منتج أولاً", "error");
-        return;
-      }
-
-      const hasTikTok = cart.some(item => item.section === "TikTok Coins");
-      const hasGames = cart.some(item => item.section === "الألعاب");
-      const hasSubs = cart.some(item => item.section === "اشتراكات التطبيقات");
-
-      const tiktokUsername = document.getElementById("tiktokUsername").value.trim();
-      const playerId = document.getElementById("playerId").value.trim();
-      const customerEmail = document.getElementById("customerEmail").value.trim();
-      const paymentMethod = document.getElementById("paymentMethod").value;
-
-      if (hasTikTok && !tiktokUsername) {
-        document.getElementById("tiktokUsername").focus();
-        showToast("يرجى إدخال يوزر تيك توك أولاً", "error");
-        return;
-      }
-
-      if (hasGames && !playerId) {
-        document.getElementById("playerId").focus();
-        showToast("يرجى إدخال Player ID أولاً", "error");
-        return;
-      }
-
-      if (hasSubs && !customerEmail) {
-        document.getElementById("customerEmail").focus();
-        showToast("يرجى إدخال البريد الإلكتروني أولاً", "error");
-        return;
-      }
-
-      if (!paymentMethod) {
-        document.getElementById("paymentMethod").focus();
-        showToast("يرجى اختيار طريقة الدفع أولاً", "error");
-        return;
-      }
-
-      document.getElementById("cartModal").classList.add("show");
-      showToast("راجع طلبك داخل السلة ثم اضغط إرسال الطلب", "success");
+    function addUsdtStoreBuys(open=false){
+      const amount = Number(document.getElementById("usdtStoreAmount").value || 0);
+      if(!amount){toast("اكتب كمية USDT");return}
+      const price = amount * usdtRate("store_buys");
+      addItem("USDT", `الزبون يبيع ${amount} USDT بسعر ${usdtRate("store_buys")}`, price, "crypto_store_buys");
+      if(open) toggleCart();
     }
 
-    function sendCartWhatsApp() {
-      if (cart.length === 0) {
-        showToast("السلة فارغة", "error");
+    const twixOriginalUpdatePaymentInfo = updatePaymentInfo;
+    updatePaymentInfo = function(){
+      filterPaymentForUSDT();
+      twixOriginalUpdatePaymentInfo();
+    };
+
+    const twixOriginalSendOrder = sendOrder;
+    sendOrder = async function(){
+      const hasStoreBuysUSDT = cart.some(i => i.type === "crypto_store_buys");
+      if(hasStoreBuysUSDT && !document.getElementById("customerAccount").value.trim()){
+        toast("أدخل رقم حساب الزبون");
         return;
       }
 
-      const hasTikTok = cart.some(item => item.section === "TikTok Coins");
-      const hasGames = cart.some(item => item.section === "الألعاب");
-      const hasSubs = cart.some(item => item.section === "اشتراكات التطبيقات");
-
-      const tiktokUsername = document.getElementById("tiktokUsername").value.trim();
-      const playerId = document.getElementById("playerId").value.trim();
-      const customerEmail = document.getElementById("customerEmail").value.trim();
-      const paymentMethod = document.getElementById("paymentMethod").value;
-
-      if (hasTikTok && !tiktokUsername) {
-        showSection("tiktok");
-        document.getElementById("tiktokUsername").focus();
-        showToast("يرجى إدخال يوزر تيك توك قبل إرسال الطلب", "error");
-        return;
+      if(db && cart.length){
+        try{
+          await db.from("orders").insert([{
+            username: document.getElementById("customerName").value.trim() || "",
+            user_id: document.getElementById("tiktokUser").value.trim() || document.getElementById("playerId").value.trim() || "",
+            total: total(),
+            payment_method: document.getElementById("paymentMethod").value || ""
+          }]);
+        }catch(e){}
       }
 
-      if (hasGames && !playerId) {
-        showSection("tiktok");
-        document.getElementById("playerId").focus();
-        showToast("يرجى إدخال Player ID قبل إرسال الطلب", "error");
-        return;
-      }
+      twixOriginalSendOrder();
+    };
 
-      if (hasSubs && !customerEmail) {
-        showSection("tiktok");
-        document.getElementById("customerEmail").focus();
-        showToast("يرجى إدخال البريد الإلكتروني قبل إرسال الطلب", "error");
-        return;
-      }
-
-      if (!paymentMethod) {
-        showSection("tiktok");
-        document.getElementById("paymentMethod").focus();
-        showToast("يرجى اختيار طريقة الدفع أولاً", "error");
-        return;
-      }
-
-      let message = "طلب جديد من TwiX STORE\n\n";
-
-      if (hasTikTok) {
-        message += "يوزر تيك توك: @" + tiktokUsername.replace("@", "") + "\n";
-      }
-
-      if (hasGames) {
-        message += "Player ID: " + playerId + "\n";
-      }
-
-      if (hasSubs) {
-        message += "البريد الإلكتروني: " + customerEmail + "\n";
-      }
-
-      message += "طريقة الدفع: " + paymentMethod + "\n";
-
-      if (paymentMethod === "بنكك") {
-        message += "رقم بنكك: 3697220\n";
-        message += "الاسم: عبدالعزيز داير خضر\n";
-      } else if (paymentMethod === "ماي كاشي") {
-        message += "رقم ماي كاشي: 401401477\n";
-        message += "الاسم: عبدالعزيز داير خضر\n";
-      } else if (paymentMethod === "برافو") {
-        message += "رقم برافو: 71149462\n";
-        message += "الاسم: عبدالعزيز داير خضر\n";
-      } else if (paymentMethod === "فودافون كاش") {
-        message += "رقم فودافون كاش: 01036372342\n";
-        message += "الاسم: علي\n";
-      }
-
-      message += "\n📌 تذكير مهم:\n";
-      message += "- رقم العملية يجب أن يكون ظاهر\n";
-      message += "- التعليق: مقابل شحن من متجر TwiX\n";
-      message += "- لا يقبل إشعار بدون تعليق\n\n";
-
-      message += "تفاصيل الطلب:\n";
-
-      cart.forEach((item, index) => {
-        message += `${index + 1}- ${item.name}\n`;
-        message += `الباقة: ${item.pack}\n`;
-        message += `الكمية: ${item.qty}\n`;
-
-        if (item.price > 0) {
-          message += `السعر: ${formatPrice(item.price * item.qty)}\n`;
-        } else {
-          message += `السعر: الرجاء إرسال السعر الحالي\n`;
-        }
-
-        if (item.section) {
-          message += `القسم: ${item.section}\n`;
-        }
-
-        message += `\n`;
-      });
-
-      const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-      if (total > 0) {
-        message += `إجمالي العناصر المسعرة: ${formatPrice(total)}\n\n`;
-      }
-
-      message += "الرجاء إرسال اسكرين شوت الدفع هنا بعد فتح المحادثة.";
-
-      document.getElementById("thankYouMessage").style.display = "block";
-      showToast("تم تجهيز الطلب وفتح واتساب", "success");
-
-      const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
+    function toggleSupport(){
+      document.getElementById("supportModal").classList.toggle("show");
+      loadSupportMessages();
     }
 
-    document.getElementById("paymentMethod").addEventListener("change", updatePaymentInfo);
+    async function loadSupportMessages(){
+      const box = document.getElementById("supportMessages");
+      if(!box) return;
+      box.innerHTML = "";
+      if(db){
+        try{
+          const { data, error } = await db.from("messages").select("*").order("id",{ascending:false}).limit(8);
+          if(!error && data && data.length){
+            box.innerHTML = data.map(m=>`
+              <div class="support-bubble"><b>${m.user_name || "زبون"}</b><br>${m.message || ""}</div>
+              ${m.reply ? `<div class="support-bubble reply"><b>الدعم</b><br>${m.reply}</div>` : ""}
+            `).join("");
+            return;
+          }
+        }catch(e){}
+      }
+      const local = JSON.parse(localStorage.getItem("twix_support_messages") || "[]");
+      box.innerHTML = local.length ? local.map(m=>`<div class="support-bubble"><b>${m.name}</b><br>${m.message}</div>`).join("") : '<div class="support-bubble">لا توجد رسائل بعد.</div>';
+    }
 
-    window.addEventListener("click", function(e) {
-      const modal = document.getElementById("cartModal");
-      if (e.target === modal) toggleCart();
-    });
+    async function sendSupportMessage(){
+      const name = document.getElementById("supportName").value.trim() || "زبون";
+      const message = document.getElementById("supportText").value.trim();
+      if(!message){toast("اكتب الرسالة أولًا");return;}
 
-    document.addEventListener("DOMContentLoaded", function() {
-      renderCart();
-      updateCustomTikTokPrice();
-      updatePaymentInfo();
-      updateDynamicFields();
-    });
+      let saved = false;
+      if(db){
+        try{
+          const { error } = await db.from("messages").insert([{user_name:name, message:message}]);
+          if(!error) saved = true;
+        }catch(e){}
+      }
+      if(!saved){
+        const local = JSON.parse(localStorage.getItem("twix_support_messages") || "[]");
+        local.unshift({name, message});
+        localStorage.setItem("twix_support_messages", JSON.stringify(local));
+      }
+      document.getElementById("supportText").value = "";
+      toast("تم إرسال رسالتك");
+      loadSupportMessages();
+    }
+
+    function openSupportWhatsApp(){
+      const name = document.getElementById("supportName").value.trim();
+      const message = document.getElementById("supportText").value.trim() || "مرحبا، عندي مشكلة في الطلب";
+      const text = (name ? "الاسم: " + name + "\\n" : "") + message;
+      window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(text), "_blank");
+    }
+
+    renderTikTok();renderGameServices();renderSubServices();renderCryptoServices();renderReviews();setLangText();renderCart();
   </script>
 </body>
-  </html>
+            </html>
