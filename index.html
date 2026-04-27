@@ -438,6 +438,12 @@
     let lang = localStorage.getItem("twix_lang") || "ar";
     let cart = JSON.parse(localStorage.getItem("twix_cart") || "[]");
 
+    let supportUserId = localStorage.getItem("twix_support_user_id");
+    if(!supportUserId){
+      supportUserId = "twix_" + Date.now() + "_" + Math.random().toString(36).slice(2, 9);
+      localStorage.setItem("twix_support_user_id", supportUserId);
+    }
+
     const prices = {
       tiktok_100: 9000, tiktok_500: 28000, tiktok_1000: 47000, tiktok_5000: 235000, tiktok_17500: 805000,
       usdt_buy: 0, usdt_sell: 0
@@ -693,6 +699,7 @@
 
     function toggleSupport(){
       document.getElementById("supportModal").classList.toggle("show");
+      fillSavedSupportName();
       loadSupportMessages();
     }
 
@@ -700,9 +707,16 @@
       const box = document.getElementById("supportMessages");
       if(!box) return;
       box.innerHTML = "";
+
       if(db){
         try{
-          const { data, error } = await db.from("messages").select("*").order("id",{ascending:false}).limit(8);
+          const { data, error } = await db
+            .from("messages")
+            .select("*")
+            .eq("user_id", supportUserId)
+            .order("id", { ascending:false })
+            .limit(20);
+
           if(!error && data && data.length){
             box.innerHTML = data.map(m=>`
               <div class="support-bubble"><b>${m.user_name || "زبون"}</b><br>${m.message || ""}</div>
@@ -712,40 +726,67 @@
           }
         }catch(e){}
       }
+
       const local = JSON.parse(localStorage.getItem("twix_support_messages") || "[]");
-      box.innerHTML = local.length ? local.map(m=>`<div class="support-bubble"><b>${m.name}</b><br>${m.message}</div>`).join("") : '<div class="support-bubble">لا توجد رسائل بعد.</div>';
+      const mine = local.filter(m => m.user_id === supportUserId);
+      box.innerHTML = mine.length
+        ? mine.map(m=>`<div class="support-bubble"><b>${m.name}</b><br>${m.message}</div>`).join("")
+        : '<div class="support-bubble">لا توجد رسائل بعد.</div>';
     }
 
     async function sendSupportMessage(){
-      const name = document.getElementById("supportName").value.trim() || "زبون";
-      const message = document.getElementById("supportText").value.trim();
-      if(!message){toast("اكتب الرسالة أولًا");return;}
+      const nameInput = document.getElementById("supportName");
+      const textInput = document.getElementById("supportText");
+
+      const name = (nameInput.value || "").trim() || "زبون";
+      const message = (textInput.value || "").trim();
+
+      if(!message){
+        toast("اكتب الرسالة أولًا");
+        return;
+      }
+
+      localStorage.setItem("twix_support_name", name);
 
       let saved = false;
       if(db){
         try{
-          const { error } = await db.from("messages").insert([{user_name:name, message:message}]);
+          const { error } = await db.from("messages").insert([{
+            user_name: name,
+            message: message,
+            user_id: supportUserId
+          }]);
           if(!error) saved = true;
         }catch(e){}
       }
+
       if(!saved){
         const local = JSON.parse(localStorage.getItem("twix_support_messages") || "[]");
-        local.unshift({name, message});
+        local.unshift({name, message, user_id: supportUserId});
         localStorage.setItem("twix_support_messages", JSON.stringify(local));
       }
-      document.getElementById("supportText").value = "";
+
+      textInput.value = "";
       toast("تم إرسال رسالتك");
       loadSupportMessages();
+    }
+
+    function fillSavedSupportName(){
+      const savedName = localStorage.getItem("twix_support_name");
+      const input = document.getElementById("supportName");
+      if(savedName && input) input.value = savedName;
     }
 
     function openSupportWhatsApp(){
       const name = document.getElementById("supportName").value.trim();
       const message = document.getElementById("supportText").value.trim() || "مرحبا، عندي مشكلة في الطلب";
+      if(name) localStorage.setItem("twix_support_name", name);
       const text = (name ? "الاسم: " + name + "\\n" : "") + message;
       window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(text), "_blank");
     }
 
+    fillSavedSupportName();
     renderTikTok();renderGameServices();renderSubServices();renderCryptoServices();renderReviews();setLangText();renderCart();
   </script>
 </body>
-            </html>
+          </html>
